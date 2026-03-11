@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of John Molina — Software Engineer based in NJ." />
+  <title>John R. Molina</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨🏽‍💻</text></svg>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="John R. Molina" />
+  <meta property="og:description" content="Software Engineer based in NJ" />
+  <meta property="og:image" content="https://richtxteditor.github.io/og-image.png" />
+  <meta property="og:url" content="https://richtxteditor.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ── Skip Navigation ────────────────────────────────────── -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <header>
+    <nav aria-label="Primary navigation">
+      <div class="container">
+        <a href="#hero" class="nav-logo" aria-label="John Molina — home">jrm</a>
+        <ul class="nav-links" role="list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="theme-toggle" type="button" aria-label="Toggle theme"></button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ── Hero ─────────────────────────────────────────────── -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="container hero-container">
+        <img src="prof_pic.png" alt="Photo of John Molina" class="hero-photo" width="280" height="280" />
+        <div class="hero-text">
+        <h1 class="hero-name" id="hero-heading">John R. Molina</h1>
+        <p class="hero-title">Software Engineer</p>
+        <p class="hero-bio">
+          Full-stack engineer with a CS foundation and 7+ years of data management experience.
+          I build backend systems, ship responsive frontends, and bridge the gap between
+          complex data and the people who need it.
+        </p>
+        <div class="hero-links">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="https://github.com/richtxteditor" class="btn" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">GitHub</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Projects ─────────────────────────────────────────── -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">Work</p>
+        <h2 class="section-title" id="projects-heading">Projects</h2>
+
+        <div class="projects-grid" role="list">
+
+          <a href="https://github.com/richtxteditor/fusion-manaba-backend" class="project-card" role="listitem" target="_blank" rel="noopener" aria-label="Fusion Manaba — view on GitHub (opens in new tab)">
+            <div class="project-header">
+              <span class="project-name">Fusion Manaba</span>
+              <span class="project-lang" aria-label="Languages: Python and TypeScript">Python · TypeScript</span>
+            </div>
+            <p class="project-desc">
+              Full-stack e-commerce prototype for home-baked goods. Django REST Framework backend
+              with a React + TypeScript frontend, PostgreSQL database, and Docker containerization.
+              Currently in active development.
+            </p>
+          </a>
+
+          <a href="https://github.com/richtxteditor/Client-Server-Chat-System-with-Enhanced-TCP-Protocol" class="project-card" role="listitem" target="_blank" rel="noopener" aria-label="Client/Server Chat System — view on GitHub (opens in new tab)">
+            <div class="project-header">
+              <span class="project-name">Client/Server Chat System</span>
+              <span class="project-lang" aria-label="Languages: Java and C">Java · C</span>
+            </div>
+            <p class="project-desc">
+              Multithreaded chat application built over TCP/IP using Linux sockets. Implements
+              persistent connections, secure data transmission, and custom message parsing
+              with rigorous JUnit testing.
+            </p>
+          </a>
+
+          <a href="https://github.com/richtxteditor/MSU-datasci-geopolitical-analysis" class="project-card" role="listitem" target="_blank" rel="noopener" aria-label="Global Economic Impact Analysis — view on GitHub (opens in new tab)">
+            <div class="project-header">
+              <span class="project-name">Global Economic Impact Analysis</span>
+              <span class="project-lang" aria-label="Languages: Python and Jupyter">Python · Jupyter</span>
+            </div>
+            <p class="project-desc">
+              Interactive data visualizations exploring the relationships between global events
+              and economic trends. Built as a data science capstone at Montclair State University.
+            </p>
+          </a>
+
+          <a href="https://github.com/richtxteditor/linear-algebra-graphics-project" class="project-card" role="listitem" target="_blank" rel="noopener" aria-label="Linear Algebra Graphics — view on GitHub (opens in new tab)">
+            <div class="project-header">
+              <span class="project-name">Linear Algebra Graphics</span>
+              <span class="project-lang" aria-label="Languages: Python and Jupyter">Python · Jupyter</span>
+            </div>
+            <p class="project-desc">
+              Automotive design case studies applying matrix transformations, animation, and
+              geometric operations to model and visualize 3D structures in Python.
+            </p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About ────────────────────────────────────────────── -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">Background</p>
+        <h2 class="section-title" id="about-heading">About</h2>
+
+        <div class="about-body">
+          <p>
+            I'm a software engineer based in Little Ferry, NJ. I hold a BS in Computer Science
+            from Montclair State University and have spent 7+ years working with data at scale —
+            most recently at Columbia University, where I built ETL pipelines and analytics
+            workflows across millions of constituent records.
+          </p>
+          <p>
+            Since 2019 I've worked as an independent consultant, architecting cloud-native
+            applications, building data pipelines, and managing production systems for clients.
+            I'm currently open to new full-time opportunities.
+          </p>
+        </div>
+
+        <ul class="skills" role="list" aria-label="Technical skills">
+          <li class="skill-tag">Python</li>
+          <li class="skill-tag">TypeScript</li>
+          <li class="skill-tag">JavaScript</li>
+          <li class="skill-tag">Java</li>
+          <li class="skill-tag">SQL</li>
+          <li class="skill-tag">C/C++</li>
+          <li class="skill-tag">Django</li>
+          <li class="skill-tag">React</li>
+          <li class="skill-tag">Node.js</li>
+          <li class="skill-tag">PostgreSQL</li>
+          <li class="skill-tag">Docker</li>
+          <li class="skill-tag">AWS</li>
+          <li class="skill-tag">GitHub Actions</li>
+          <li class="skill-tag">Linux</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Contact ──────────────────────────────────────────── -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">Get in touch</p>
+        <h2 class="section-title" id="contact-heading">Contact</h2>
+
+        <p class="contact-text">
+          I'm always open to hearing about interesting projects or new opportunities.
+          My inbox is open.
+        </p>
+
+        <ul class="contact-links" role="list">
+          <li>
+            <a href="mailto:jrm90@me.com" class="contact-link" aria-label="Send email to jrm90@me.com">
+              <span class="contact-link-label" aria-hidden="true">Email</span>
+              jrm90@me.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/richtxteditor" class="contact-link" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">
+              <span class="contact-link-label" aria-hidden="true">GitHub</span>
+              github.com/richtxteditor
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/johnrmolina/" class="contact-link" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in new tab)">
+              <span class="contact-link-label" aria-hidden="true">LinkedIn</span>
+              linkedin.com/in/johnrmolina
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <span class="footer-copy">&copy; <time id="year">2026</time> John Molina</span>
+      <span class="footer-made" aria-label="crafted with love in NJ">crafted with &hearts; in NJ</span>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  (function () {
+    var btn = document.getElementById("theme-toggle");
+    var root = document.documentElement;
+
+    function getEffective() {
+      return root.getAttribute("data-theme")
+        || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    }
+
+    function updateLabel() {
+      var current = getEffective();
+      btn.textContent = current === "dark" ? "\u2600" : "\u263D";
+      btn.setAttribute("aria-label", "Switch to " + (current === "dark" ? "light" : "dark") + " theme");
+    }
+
+    btn.addEventListener("click", function () {
+      var next = getEffective() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      updateLabel();
+    });
+
+    matchMedia("(prefers-color-scheme: light)").addEventListener("change", updateLabel);
+    updateLabel();
+  })();
+</script>
+</body>
+</html>
