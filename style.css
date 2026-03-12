@@ -147,9 +147,14 @@ nav .container {
 .nav-logo {
   font-family: var(--font);
   font-size: 0.85rem;
-  color: var(--text);
+  color: #d4a856;
   text-decoration: none;
   letter-spacing: 0.05em;
+}
+
+[data-theme="light"] .nav-logo,
+:root:not([data-theme="dark"]) .nav-logo {
+  color: #8a6d2e;
 }
 
 .nav-links {
@@ -407,6 +412,9 @@ nav .container {
     border-color: #247a52;
     background: rgba(45, 138, 94, 0.21);
   }
+  :root:not([data-theme="dark"]) .nav-logo { color: #8a6d2e; }
+  :root:not([data-theme="dark"]) .section-label { color: #8a6d2e; }
+  :root:not([data-theme="dark"]) .heart { color: #c94444; }
 }
 
 [data-theme="light"] .btn-github {
@@ -444,10 +452,15 @@ nav .container {
 .section-label {
   font-family: var(--font);
   font-size: 0.7rem;
-  color: var(--muted);
+  color: #b89a4a;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
+}
+
+[data-theme="light"] .section-label,
+:root:not([data-theme="dark"]) .section-label {
+  color: #8a6d2e;
 }
 
 .section-title {
@@ -534,6 +547,78 @@ nav .container {
   color: var(--dim);
 }
 
+/* ─── Brand Colors — Dark Theme (default) ──────────────────── */
+.lang-python      { color: #6ba1d6; border-color: rgba(55,118,171,0.35); background: rgba(55,118,171,0.10); }
+.lang-typescript  { color: #6a9fd6; border-color: rgba(49,120,198,0.35); background: rgba(49,120,198,0.10); }
+.lang-javascript  { color: #e0d06a; border-color: rgba(247,223,30,0.30); background: rgba(247,223,30,0.07); }
+.lang-java        { color: #e8a84a; border-color: rgba(237,139,0,0.35);  background: rgba(237,139,0,0.10);  }
+.lang-php         { color: #9a9dcc; border-color: rgba(119,123,180,0.35); background: rgba(119,123,180,0.10); }
+.lang-sql         { color: #dba350; border-color: rgba(227,140,0,0.35);  background: rgba(227,140,0,0.10);  }
+.lang-cpp         { color: #5a9fd6; border-color: rgba(0,89,156,0.40);   background: rgba(0,89,156,0.12);   }
+.lang-django      { color: #5aaa7a; border-color: rgba(9,46,32,0.60);    background: rgba(44,130,90,0.12);  }
+.lang-react       { color: #6ad4f0; border-color: rgba(97,218,251,0.30); background: rgba(97,218,251,0.08); }
+.lang-node        { color: #66b866; border-color: rgba(51,153,51,0.35);  background: rgba(51,153,51,0.10);  }
+.lang-postgres    { color: #6a90b8; border-color: rgba(51,103,145,0.40); background: rgba(51,103,145,0.12); }
+.lang-docker      { color: #5ab0ee; border-color: rgba(36,150,237,0.35); background: rgba(36,150,237,0.10); }
+.lang-aws         { color: #e8a84a; border-color: rgba(255,153,0,0.35);  background: rgba(255,153,0,0.10);  }
+.lang-ghactions   { color: #5aaaff; border-color: rgba(32,136,255,0.35); background: rgba(32,136,255,0.10); }
+.lang-linux       { color: #e0cc5a; border-color: rgba(252,198,36,0.30); background: rgba(252,198,36,0.07); }
+.lang-jupyter     { color: #e8954a; border-color: rgba(243,118,38,0.35); background: rgba(243,118,38,0.10); }
+
+/* Brand colors inside project-lang (no bg/border, just text color) */
+.project-lang .lang-python     { color: #6ba1d6; background: none; border: none; }
+.project-lang .lang-typescript { color: #6a9fd6; background: none; border: none; }
+.project-lang .lang-javascript { color: #e0d06a; background: none; border: none; }
+.project-lang .lang-java       { color: #e8a84a; background: none; border: none; }
+.project-lang .lang-cpp        { color: #5a9fd6; background: none; border: none; }
+.project-lang .lang-jupyter    { color: #e8954a; background: none; border: none; }
+
+/* ─── Brand Colors — Light Theme ───────────────────────────── */
+[data-theme="light"] .lang-python,
+:root:not([data-theme="dark"]) .lang-python      { color: #2b6399; border-color: rgba(55,118,171,0.30); background: rgba(55,118,171,0.08); }
+[data-theme="light"] .lang-typescript,
+:root:not([data-theme="dark"]) .lang-typescript  { color: #265d99; border-color: rgba(49,120,198,0.30); background: rgba(49,120,198,0.08); }
+[data-theme="light"] .lang-javascript,
+:root:not([data-theme="dark"]) .lang-javascript  { color: #8a7a10; border-color: rgba(180,160,10,0.30); background: rgba(200,180,10,0.07); }
+[data-theme="light"] .lang-java,
+:root:not([data-theme="dark"]) .lang-java        { color: #a06000; border-color: rgba(237,139,0,0.30);  background: rgba(237,139,0,0.08);  }
+[data-theme="light"] .lang-php,
+:root:not([data-theme="dark"]) .lang-php         { color: #5b5d8a; border-color: rgba(119,123,180,0.30); background: rgba(119,123,180,0.08); }
+[data-theme="light"] .lang-sql,
+:root:not([data-theme="dark"]) .lang-sql         { color: #996d00; border-color: rgba(227,140,0,0.30);  background: rgba(227,140,0,0.08);  }
+[data-theme="light"] .lang-cpp,
+:root:not([data-theme="dark"]) .lang-cpp         { color: #005599; border-color: rgba(0,89,156,0.30);   background: rgba(0,89,156,0.08);   }
+[data-theme="light"] .lang-django,
+:root:not([data-theme="dark"]) .lang-django      { color: #1a6640; border-color: rgba(9,46,32,0.30);    background: rgba(44,130,90,0.08);  }
+[data-theme="light"] .lang-react,
+:root:not([data-theme="dark"]) .lang-react       { color: #1a8aaa; border-color: rgba(30,160,200,0.30); background: rgba(97,218,251,0.08); }
+[data-theme="light"] .lang-node,
+:root:not([data-theme="dark"]) .lang-node        { color: #267326; border-color: rgba(51,153,51,0.30);  background: rgba(51,153,51,0.08);  }
+[data-theme="light"] .lang-postgres,
+:root:not([data-theme="dark"]) .lang-postgres    { color: #2a5577; border-color: rgba(51,103,145,0.30); background: rgba(51,103,145,0.08); }
+[data-theme="light"] .lang-docker,
+:root:not([data-theme="dark"]) .lang-docker      { color: #1670aa; border-color: rgba(36,150,237,0.30); background: rgba(36,150,237,0.08); }
+[data-theme="light"] .lang-aws,
+:root:not([data-theme="dark"]) .lang-aws         { color: #a06000; border-color: rgba(255,153,0,0.30);  background: rgba(255,153,0,0.08);  }
+[data-theme="light"] .lang-ghactions,
+:root:not([data-theme="dark"]) .lang-ghactions   { color: #1565cc; border-color: rgba(32,136,255,0.30); background: rgba(32,136,255,0.08); }
+[data-theme="light"] .lang-linux,
+:root:not([data-theme="dark"]) .lang-linux       { color: #8a7a10; border-color: rgba(200,160,20,0.30); background: rgba(252,198,36,0.07); }
+[data-theme="light"] .lang-jupyter,
+:root:not([data-theme="dark"]) .lang-jupyter     { color: #b05a10; border-color: rgba(243,118,38,0.30); background: rgba(243,118,38,0.08); }
+
+/* Light theme — project-lang text-only overrides */
+[data-theme="light"] .project-lang .lang-python,
+:root:not([data-theme="dark"]) .project-lang .lang-python     { color: #2b6399; background: none; border: none; }
+[data-theme="light"] .project-lang .lang-typescript,
+:root:not([data-theme="dark"]) .project-lang .lang-typescript { color: #265d99; background: none; border: none; }
+[data-theme="light"] .project-lang .lang-java,
+:root:not([data-theme="dark"]) .project-lang .lang-java       { color: #a06000; background: none; border: none; }
+[data-theme="light"] .project-lang .lang-cpp,
+:root:not([data-theme="dark"]) .project-lang .lang-cpp        { color: #005599; background: none; border: none; }
+[data-theme="light"] .project-lang .lang-jupyter,
+:root:not([data-theme="dark"]) .project-lang .lang-jupyter    { color: #b05a10; background: none; border: none; }
+
 /* ─── Contact ───────────────────────────────────────────────── */
 .contact-text {
   font-size: 0.95rem;
@@ -571,6 +656,19 @@ nav .container {
   width: 72px;
 }
 
+/* Contact label brand colors — dark theme */
+.contact-label-email    { color: #5aaaf0; }
+.contact-label-github   { color: #9da5ad; }
+.contact-label-linkedin { color: #5a9ad6; }
+
+/* Contact label brand colors — light theme */
+[data-theme="light"] .contact-label-email,
+:root:not([data-theme="dark"]) .contact-label-email    { color: #1a73cc; }
+[data-theme="light"] .contact-label-github,
+:root:not([data-theme="dark"]) .contact-label-github   { color: #4a525a; }
+[data-theme="light"] .contact-label-linkedin,
+:root:not([data-theme="dark"]) .contact-label-linkedin { color: #0a66c2; }
+
 /* ─── Footer ────────────────────────────────────────────────── */
 footer {
   padding: 2rem 0;
@@ -587,6 +685,19 @@ footer .container {
 
 .footer-copy {
   font-size: 0.8rem;
+  color: #b89a4a;
+}
+
+[data-theme="light"] .footer-copy,
+:root:not([data-theme="dark"]) .footer-copy {
+  color: #8a6d2e;
+}
+
+.footer-left {
+  font-size: 0.8rem;
+}
+
+.footer-name {
   color: var(--muted);
 }
 
@@ -594,6 +705,15 @@ footer .container {
   font-family: var(--font);
   font-size: 0.7rem;
   color: var(--muted);
+}
+
+.heart {
+  color: #e05a5a;
+}
+
+[data-theme="light"] .heart,
+:root:not([data-theme="dark"]) .heart {
+  color: #c94444;
 }
 
 /* ─── Responsive ────────────────────────────────────────────── */
