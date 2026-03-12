@@ -147,14 +147,14 @@ nav .container {
 .nav-logo {
   font-family: var(--font);
   font-size: 0.85rem;
-  color: #d4a856;
+  color: #9a7ad4;
   text-decoration: none;
   letter-spacing: 0.05em;
 }
 
 [data-theme="light"] .nav-logo,
 :root:not([data-theme="dark"]) .nav-logo {
-  color: #8a6d2e;
+  color: #5c3d99;
 }
 
 .nav-links {
@@ -412,7 +412,7 @@ nav .container {
     border-color: #247a52;
     background: rgba(45, 138, 94, 0.21);
   }
-  :root:not([data-theme="dark"]) .nav-logo { color: #8a6d2e; }
+  :root:not([data-theme="dark"]) .nav-logo { color: #5c3d99; }
   :root:not([data-theme="dark"]) .section-label { color: #8a6d2e; }
   :root:not([data-theme="dark"]) .heart { color: #c94444; }
 }
