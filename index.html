@@ -71,14 +71,11 @@
             <h1 class="hero-name" id="hero-heading">John R. Molina</h1>
             <p class="hero-title">Software Engineer</p>
             <p class="hero-bio">
-              Hello! I am a Full Stack engineer with a Computer Science
-              foundation in Full Stack Web Development and Systems Engineering.
-              I also have 7+ years of data management experience in nonprofit
-              and corporate environments around New York City.
-              <br /><br />
-              I build scalable, efficient backend systems, ship responsive and
-              engaging frontends, and bridge the gap between complex data and
-              the people who need it in an easy to understand way.
+              Hello! I am a Software engineer with a B.S. in Computer Science and hands-on experience in data management, database systems, and full stack web development.
+              <br />
+              <br />
+              I previously managed research data systems supporting Columbia
+              University's $5.48B fundraising campaign until 2022. Currently building projects in React, Node.js, and TypeScript while deepening my algorithms foundation through MIT OCW.
             </p>
             <div class="hero-links">
               <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -214,19 +211,30 @@
 
           <div class="about-body">
             <p>
-              I am a software engineer based in North NJ & NYC. I hold a BS in
-              Computer Science from Montclair State University and have spent 7+
-              years working with data at scale. Most recently at Columbia
-              University, I built ETL pipelines and analytics workflows across
-              millions of constituent records for the Office of Alumni &
-              Development.
+              I'm a software engineer based in New Jersey with a background that
+              spans data management, hospitality operations, and computer
+              science. From 2017 to 2022, I worked with Columbia University's
+              Data Management Group, where I maintained and queried databases
+              housing over 5 million constituent records, supported a $5.48B
+              capital campaign, and built reports and data workflows used across
+              development teams. Before that, I managed front desk operations at
+              hotels in Manhattan, where I handled everything from guest systems
+              to night audit reporting.
             </p>
             <p>
-              Since 2019 I've worked as an independent consultant, architecting
-              cloud-native applications, building data pipelines, and managing
-              production systems for clients.
+              I earned my B.S. in Computer Science from Montclair State
+              University in 2024 and have been building projects to sharpen my
+              engineering skills — including Fusion Manaba, a manga tracking app
+              with a React frontend and Node/Express API, and a multithreaded
+              client-server chat system in C. I'm currently working through
+              MIT's 6.006 to strengthen my data structures and algorithms
+              knowledge. I bring a mix of real-world operational experience and
+              a growing software engineering toolkit.
             </p>
-            <p>I'm currently open to new full-time opportunities.</p>
+            <p>
+              I'm looking for my next role where I can contribute and keep
+              learning.
+            </p>
           </div>
 
           <ul class="skills" role="list" aria-label="Technical skills">
@@ -370,145 +378,6 @@
       })();
 
       (function () {
-        var logo = document.querySelector(".nav-logo");
-        var original = logo.textContent;
-        var glitchChars = "̸̷̶̵̴̡̢̧̨̛̖̗̘̙̜̝̞̟̠̣̤̥̦̩̪̫̬̭̮̯̰̱̲̳̹̺̻̼͇͈͉͍͎̀́̂̃̄̅̆̇̈̉̊̋̌̍̎̏̐̑̒̓̔̽̾̿̀́͂̓̈́͆͊͋͌͐͑͒͗͛͘̚͜͟͝͞͠͡";
-        var colors = ["#b07ee8", "#00e4ff", "#ff60aa", "#b07ee8"];
-        var scrambleSet = "!@#$%^&*<>{}[]|/\\~`01";
-        var active = false;
-        var timeout;
-
-        function addZalgo(char, intensity) {
-          var result = char;
-          for (var i = 0; i < intensity; i++) {
-            result +=
-              glitchChars[Math.floor(Math.random() * glitchChars.length)];
-          }
-          return result;
-        }
-
-        function scramble() {
-          if (!active) return;
-          var text = "";
-          for (var i = 0; i < original.length; i++) {
-            var r = Math.random();
-            if (r < 0.45) {
-              text += addZalgo(
-                scrambleSet[Math.floor(Math.random() * scrambleSet.length)],
-                Math.floor(Math.random() * 12) + 3,
-              );
-            } else if (r < 0.8) {
-              text += addZalgo(original[i], Math.floor(Math.random() * 8) + 2);
-            } else {
-              text += original[i];
-            }
-          }
-          logo.textContent = text;
-          logo.style.fontFamily = "system-ui, -apple-system, sans-serif";
-          logo.style.color = colors[Math.floor(Math.random() * colors.length)];
-          var dx = (Math.random() - 0.5) * 6;
-          var dy = (Math.random() - 0.5) * 4;
-          var skew = (Math.random() - 0.5) * 8;
-          logo.style.transform =
-            "translate(" + dx + "px," + dy + "px) skewX(" + skew + "deg)";
-          timeout = setTimeout(scramble, 35 + Math.random() * 50);
-        }
-
-        function restore() {
-          active = false;
-          clearTimeout(timeout);
-          logo.textContent = original;
-          logo.style.color = "";
-          logo.style.fontFamily = "";
-          logo.style.transform = "";
-        }
-
-        // Subtle glitch on hero name
-        var hero = document.querySelector(".hero-name");
-        var heroOriginal = hero.textContent;
-        var heroActive = false;
-        var heroTimeout;
-
-        function heroScramble() {
-          if (!heroActive) return;
-          var text = "";
-          for (var i = 0; i < heroOriginal.length; i++) {
-            if (heroOriginal[i] === " ") {
-              text += " ";
-              continue;
-            }
-            var r = Math.random();
-            if (r < 0.18) {
-              text += addZalgo(
-                scrambleSet[Math.floor(Math.random() * scrambleSet.length)],
-                Math.floor(Math.random() * 5) + 1,
-              );
-            } else if (r < 0.42) {
-              text += addZalgo(
-                heroOriginal[i],
-                Math.floor(Math.random() * 4) + 1,
-              );
-            } else {
-              text += heroOriginal[i];
-            }
-          }
-          hero.textContent = text;
-          var dx = (Math.random() - 0.5) * 3;
-          var dy = (Math.random() - 0.5) * 2;
-          hero.style.transform = "translate(" + dx + "px," + dy + "px)";
-          heroTimeout = setTimeout(heroScramble, 50 + Math.random() * 70);
-        }
-
-        function heroRestore() {
-          heroActive = false;
-          clearTimeout(heroTimeout);
-          hero.textContent = heroOriginal;
-          hero.style.transform = "";
-        }
-
-        // Glitch on hero title (Software Engineer)
-        var title = document.querySelector(".hero-title");
-        var titleOriginal = title.textContent;
-        var titleActive = false;
-        var titleTimeout;
-
-        function titleScramble() {
-          if (!titleActive) return;
-          var text = "";
-          for (var i = 0; i < titleOriginal.length; i++) {
-            if (titleOriginal[i] === " ") {
-              text += " ";
-              continue;
-            }
-            var r = Math.random();
-            if (r < 0.18) {
-              text += addZalgo(
-                scrambleSet[Math.floor(Math.random() * scrambleSet.length)],
-                Math.floor(Math.random() * 5) + 1,
-              );
-            } else if (r < 0.42) {
-              text += addZalgo(
-                titleOriginal[i],
-                Math.floor(Math.random() * 4) + 1,
-              );
-            } else {
-              text += titleOriginal[i];
-            }
-          }
-          title.textContent = text;
-          var dx = (Math.random() - 0.5) * 3;
-          var dy = (Math.random() - 0.5) * 2;
-          title.style.transform = "translate(" + dx + "px," + dy + "px)";
-          titleTimeout = setTimeout(titleScramble, 50 + Math.random() * 70);
-        }
-
-        function titleRestore() {
-          titleActive = false;
-          clearTimeout(titleTimeout);
-          title.textContent = titleOriginal;
-          title.style.transform = "";
-        }
-
         // Heart glitch on hover
         var heart = document.querySelector(".heart");
         var heartOriginal = heart.textContent;
@@ -568,31 +437,11 @@
 
         var footerMade = document.querySelector(".footer-made");
         if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          logo.addEventListener("mouseenter", function () {
-            active = true;
-            scramble();
-          });
-          logo.addEventListener("mouseleave", restore);
           footerMade.addEventListener("mouseenter", function () {
             heartActive = true;
             heartScramble();
           });
           footerMade.addEventListener("mouseleave", heartRestore);
-        }
-
-        // Run all glitches on page load, then resolve
-        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          active = true;
-          scramble();
-          setTimeout(restore, 1200);
-
-          heroActive = true;
-          heroScramble();
-          setTimeout(heroRestore, 1300);
-
-          titleActive = true;
-          titleScramble();
-          setTimeout(titleRestore, 1300);
         }
       })();
     </script>
