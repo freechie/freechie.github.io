@@ -8,7 +8,8 @@
 }
 
 :root {
-  --bg: #0f0f0f;
+  --bg: linear-gradient(135deg, #0f172a 0%, #1a1033 25%, #0c1929 50%, #091a16 75%, #1a1508 100%);
+  --nav-bg: #0f172a;
   --surface: #161616;
   --border: #222222;
   --muted: #777777;
@@ -20,7 +21,8 @@
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --bg: #fafafa;
+    --bg: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 25%, #dbeafe 50%, #d1fae5 75%, #fef3c7 100%);
+    --nav-bg: #ffffff;
     --surface: #f0f0f0;
     --border: #e0e0e0;
     --muted: #737373;
@@ -42,7 +44,8 @@
 }
 
 [data-theme="light"] {
-  --bg: #fafafa;
+  --bg: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 25%, #dbeafe 50%, #d1fae5 75%, #fef3c7 100%);
+  --nav-bg: #ffffff;
   --surface: #f0f0f0;
   --border: #e0e0e0;
   --muted: #737373;
@@ -81,6 +84,7 @@ html {
 
 body {
   background: var(--bg);
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--sans);
   font-size: 16px;
@@ -95,7 +99,7 @@ body {
   left: 1rem;
   padding: 0.5rem 1rem;
   background: var(--text);
-  color: var(--bg);
+  color: var(--nav-bg);
   font-size: 0.875rem;
   font-weight: 600;
   border-radius: 4px;
@@ -137,7 +141,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 100;
-  background: var(--bg);
+  background: var(--nav-bg);
   border-bottom: 1px solid var(--border);
 }
 
