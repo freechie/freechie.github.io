@@ -642,6 +642,16 @@ nav .container {
   border-color: rgba(243, 118, 38, 0.5);
   background: rgba(243, 118, 38, 0.14);
 }
+.lang-html {
+  color: #f06040;
+  border-color: rgba(227, 76, 38, 0.5);
+  background: rgba(227, 76, 38, 0.14);
+}
+.lang-css {
+  color: #50a0ff;
+  border-color: rgba(38, 77, 228, 0.5);
+  background: rgba(38, 77, 228, 0.14);
+}
 
 /* Brand colors inside project-lang (no bg/border, just text color) */
 .project-lang .lang-python {
@@ -671,6 +681,16 @@ nav .container {
 }
 .project-lang .lang-jupyter {
   color: #ff8830;
+  background: none;
+  border: none;
+}
+.project-lang .lang-html {
+  color: #f06040;
+  background: none;
+  border: none;
+}
+.project-lang .lang-css {
+  color: #50a0ff;
   background: none;
   border: none;
 }
@@ -773,6 +793,19 @@ nav .container {
   background: rgba(224, 96, 16, 0.08);
 }
 
+[data-theme="light"] .lang-html,
+:root:not([data-theme="dark"]) .lang-html {
+  color: #cc3310;
+  border-color: rgba(204, 51, 16, 0.35);
+  background: rgba(204, 51, 16, 0.08);
+}
+[data-theme="light"] .lang-css,
+:root:not([data-theme="dark"]) .lang-css {
+  color: #1860cc;
+  border-color: rgba(24, 96, 204, 0.35);
+  background: rgba(24, 96, 204, 0.08);
+}
+
 /* Light theme — project-lang text-only overrides */
 [data-theme="light"] .project-lang .lang-python,
 :root:not([data-theme="dark"]) .project-lang .lang-python {
@@ -801,6 +834,18 @@ nav .container {
 [data-theme="light"] .project-lang .lang-jupyter,
 :root:not([data-theme="dark"]) .project-lang .lang-jupyter {
   color: #e06010;
+  background: none;
+  border: none;
+}
+[data-theme="light"] .project-lang .lang-html,
+:root:not([data-theme="dark"]) .project-lang .lang-html {
+  color: #cc3310;
+  background: none;
+  border: none;
+}
+[data-theme="light"] .project-lang .lang-css,
+:root:not([data-theme="dark"]) .project-lang .lang-css {
+  color: #1860cc;
   background: none;
   border: none;
 }
