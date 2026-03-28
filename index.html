@@ -25,7 +25,7 @@
     <script>
       (function () {
         var t = localStorage.getItem("theme");
-        if (t) document.documentElement.setAttribute("data-theme", t);
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
   </head>
@@ -70,23 +70,25 @@
           <div class="hero-text">
             <h1 class="hero-name" id="hero-heading">John R. Molina</h1>
             <p class="hero-title">Software Engineer</p>
-            <p class="hero-bio">
-              Hello! I'm a software engineer with a B.S. in Computer Science
-              and hands-on experience in data management, database systems, and
-              full-stack web development.
-              <br />
-              <br />
-              I previously supported Columbia University's $5.48B fundraising
-              campaign by managing research data systems, ensuring accuracy and
-              reliability across large datasets.
-              <br />
-              <br />
-              Currently, I'm building projects using C/C++, Python, and
-              JavaScript while strengthening my understanding of algorithms
-              through MIT OpenCourseWare.
-            </p>
+            <div class="hero-bio">
+              <p>
+                Hello! I'm a software engineer with a B.S. in Computer Science
+                and hands-on experience in data management, database systems,
+                and full-stack web development.
+              </p>
+              <p>
+                I previously supported Columbia University's $5.48B fundraising
+                campaign by managing research data systems, ensuring accuracy
+                and reliability across large datasets.
+              </p>
+              <p>
+                Currently, I'm building projects using C/C++, Python, and
+                JavaScript while strengthening my understanding of algorithms
+                through MIT OpenCourseWare.
+              </p>
+            </div>
             <div class="hero-links">
-              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#projects" class="btn btn-primary">Projects</a>
               <a
                 href="https://github.com/richtxteditor"
                 class="btn btn-github"
@@ -117,6 +119,37 @@
 
           <div class="projects-grid" role="list">
             <a
+              href="#projects"
+              class="project-card"
+              role="listitem"
+              aria-label="Academic Affiliated Name Match — Columbia University"
+            >
+              <div class="project-header">
+                <span class="project-name"
+                  >Academic Affiliated Name Match</span
+                >
+              </div>
+              <p class="project-desc">
+                Pre-emptive deduplication workflows for regular decision,
+                early decision, and other admit cycles at an Ivy League
+                university. Scored records across 8 dimensions (name, gender,
+                age, employer, email, address, spouse, degree) to prevent
+                duplicates across 5M+ constituent records. Reports and BI
+                dashboards were built on views written in PL/SQL, with CSV
+                exports and spreadsheets used for both programmatic and manual
+                data intervention.
+              </p>
+              <div class="project-tags" aria-hidden="true">
+                <span class="skill-tag lang-sql">SQL</span>
+                <span class="skill-tag lang-python">Python</span>
+                <span class="skill-tag lang-java">Java</span>
+                <span class="skill-tag lang-datamgmt">Data Management</span>
+                <span class="skill-tag lang-bi">BI Dashboards</span>
+                <span class="skill-tag lang-excel">Excel/VBA</span>
+              </div>
+            </a>
+
+            <a
               href="https://richtxteditor.github.io/dsa"
               class="project-card"
               role="listitem"
@@ -128,19 +161,22 @@
                 <span class="project-name"
                   >DSA &amp; Interview Prep Tracker</span
                 >
-                <span
-                  class="project-lang"
-                  aria-label="Languages: C, C++, and Python"
-                  ><span class="lang-cpp">C</span> ·
-                  <span class="lang-cpp">C++</span> ·
-                  <span class="lang-python">Python</span></span
-                >
               </div>
               <p class="project-desc">
                 Structured study plan built around MIT 6.006, CLRS 4th Edition,
                 and LeetCode. A CS refresher for technical interview
                 preparation.
               </p>
+              <div class="project-tags" aria-hidden="true">
+                <span class="skill-tag lang-cpp">C</span>
+                <span class="skill-tag lang-cpp">C++</span>
+                <span class="skill-tag lang-python">Python</span>
+                <span class="skill-tag lang-html">HTML</span>
+                <span class="skill-tag lang-css">CSS</span>
+                <span class="skill-tag lang-javascript">JavaScript</span>
+                <span class="skill-tag lang-sql">MySQL</span>
+                <span class="skill-tag lang-ghactions">GitHub Actions</span>
+              </div>
             </a>
 
             <a
@@ -153,19 +189,19 @@
             >
               <div class="project-header">
                 <span class="project-name">DevTools Cheat Sheet</span>
-                <span
-                  class="project-lang"
-                  aria-label="Languages: HTML, CSS, and JavaScript"
-                  ><span class="lang-html">HTML</span> ·
-                  <span class="lang-css">CSS</span> ·
-                  <span class="lang-javascript">JS</span></span
-                >
               </div>
               <p class="project-desc">
                 Single-page reference for a terminal-centric dev environment
                 built around Zsh, Tmux, and Neovim. Documents my dotfiles
                 setup.
               </p>
+              <div class="project-tags" aria-hidden="true">
+                <span class="skill-tag lang-html">HTML</span>
+                <span class="skill-tag lang-css">CSS</span>
+                <span class="skill-tag lang-javascript">JavaScript</span>
+                <span class="skill-tag lang-sql">MySQL</span>
+                <span class="skill-tag lang-ghactions">GitHub Actions</span>
+              </div>
             </a>
 
             <a
@@ -178,14 +214,19 @@
             >
               <div class="project-header">
                 <span class="project-name">Fusion Manaba</span>
-                <span class="project-lang" aria-label="Language: TypeScript"
-                  ><span class="lang-typescript">TypeScript</span></span
-                >
               </div>
               <p class="project-desc">
                 Full-stack TypeScript e-commerce platform for home-baked goods.
                 Built with Next.js, Prisma, and PostgreSQL.
               </p>
+              <div class="project-tags" aria-hidden="true">
+                <span class="skill-tag lang-typescript">TypeScript</span>
+                <span class="skill-tag lang-react">Next.js</span>
+                <span class="skill-tag lang-postgres">PostgreSQL</span>
+                <span class="skill-tag lang-sql">MySQL</span>
+                <span class="skill-tag lang-docker">Docker</span>
+                <span class="skill-tag lang-ghactions">GitHub Actions</span>
+              </div>
             </a>
 
             <a
@@ -198,10 +239,6 @@
             >
               <div class="project-header">
                 <span class="project-name">Client/Server Chat System</span>
-                <span class="project-lang" aria-label="Languages: Java and C"
-                  ><span class="lang-java">Java</span> ·
-                  <span class="lang-cpp">C</span></span
-                >
               </div>
               <p class="project-desc">
                 Multithreaded chat application built over TCP/IP using Linux
@@ -209,6 +246,13 @@
                 transmission, and custom message parsing with rigorous JUnit
                 testing.
               </p>
+              <div class="project-tags" aria-hidden="true">
+                <span class="skill-tag lang-java">Java</span>
+                <span class="skill-tag lang-cpp">C</span>
+                <span class="skill-tag lang-linux">Linux</span>
+                <span class="skill-tag lang-sql">MySQL</span>
+                <span class="skill-tag lang-docker">Docker</span>
+              </div>
             </a>
 
             <a
@@ -223,18 +267,17 @@
                 <span class="project-name"
                   >Global Economic Impact Analysis</span
                 >
-                <span
-                  class="project-lang"
-                  aria-label="Languages: Python and Jupyter"
-                  ><span class="lang-python">Python</span> ·
-                  <span class="lang-jupyter">Jupyter</span></span
-                >
               </div>
               <p class="project-desc">
                 Interactive data visualizations exploring the relationships
                 between global events and economic trends. Built as a data
                 science capstone at Montclair State University.
               </p>
+              <div class="project-tags" aria-hidden="true">
+                <span class="skill-tag lang-python">Python</span>
+                <span class="skill-tag lang-jupyter">Jupyter</span>
+                <span class="skill-tag lang-sql">MySQL</span>
+              </div>
             </a>
 
             <a
@@ -247,19 +290,19 @@
             >
               <div class="project-header">
                 <span class="project-name">Linear Algebra Graphics</span>
-                <span
-                  class="project-lang"
-                  aria-label="Languages: Python and Jupyter"
-                  ><span class="lang-python">Python</span> ·
-                  <span class="lang-jupyter">Jupyter</span></span
-                >
               </div>
               <p class="project-desc">
                 Automotive design case studies applying matrix transformations,
                 animation, and geometric operations to model and visualize 3D
                 structures in Python.
               </p>
+              <div class="project-tags" aria-hidden="true">
+                <span class="skill-tag lang-python">Python</span>
+                <span class="skill-tag lang-jupyter">Jupyter</span>
+                <span class="skill-tag lang-sql">MySQL</span>
+              </div>
             </a>
+
           </div>
         </div>
       </section>
@@ -271,46 +314,52 @@
 
           <div class="about-body">
             <p>
-              I'm a software engineer based in New Jersey with a background in
-              data management and computer science. Until 2022, I worked with
-              Columbia University's Data Management Group, where I maintained
-              and queried databases containing over 5 million constituent
-              records. My work supported multiple billion-dollar fundraising
-              campaigns across the university.
+              I'm a software engineer based in New Jersey and New York with a
+              background in Data Management and Computer Science. Until 2022, I
+              worked with Columbia University's Data Management Group, managing
+              and querying databases with over 5 million constituent records in
+              support of major fundraising campaigns.
             </p>
             <p>
-              In that role, I built reports and data workflows focused on
-              security, data integrity, and deduplication. These tools were
-              used by development and fundraising teams to ensure accurate,
-              reliable data for decision-making.
+              Using SQL, Python, and Excel, I exported, cleaned, and
+              re-imported data to improve accuracy and usability. I also tested
+              and refined tables, views, and headers to better support
+              development needs. Alongside this, I integrated data from sources
+              like Lexis, USPS, and LinkedIn, and built relationship graphs to
+              map giving history across families and generations for outreach
+              prioritization.
             </p>
             <p>
-              I hold a B.S. in Computer Science from Montclair State
-              University. I bring both hands-on operational experience and a
-              strong foundation in core computer science concepts.
+              I improved data quality by auditing systems and contributing to
+              data governance efforts, helping reduce the university's "lost"
+              constituent population from over 11% to under 4%.
             </p>
             <p>
-              I'm currently looking for my next opportunity where I can
-              contribute, continue learning, and grow as an engineer.
+              I hold a B.S. in Computer Science from Montclair State University
+              and am currently building projects while looking for an
+              opportunity to grow and contribute as an engineer.
             </p>
           </div>
 
           <ul class="skills" role="list" aria-label="Technical skills">
-            <li class="skill-tag lang-python">Python</li>
-            <li class="skill-tag lang-typescript">TypeScript</li>
-            <li class="skill-tag lang-javascript">JavaScript</li>
-            <li class="skill-tag lang-java">Java</li>
-            <li class="skill-tag lang-php">PHP</li>
-            <li class="skill-tag lang-sql">SQL</li>
-            <li class="skill-tag lang-cpp">C/C++</li>
-            <li class="skill-tag lang-django">Django</li>
-            <li class="skill-tag lang-react">React</li>
-            <li class="skill-tag lang-node">Node.js</li>
-            <li class="skill-tag lang-postgres">PostgreSQL</li>
-            <li class="skill-tag lang-docker">Docker</li>
-            <li class="skill-tag lang-aws">AWS</li>
-            <li class="skill-tag lang-ghactions">GitHub Actions</li>
-            <li class="skill-tag lang-linux">Linux</li>
+            <li class="skill-tag lang-python" tabindex="0" role="button" aria-label="Python — view projects">Python</li>
+            <li class="skill-tag lang-sql" tabindex="0" role="button" aria-label="SQL — view projects">SQL</li>
+            <li class="skill-tag lang-javascript" tabindex="0" role="button" aria-label="JavaScript — view projects">JavaScript</li>
+            <li class="skill-tag lang-java" tabindex="0" role="button" aria-label="Java — view projects">Java</li>
+            <li class="skill-tag lang-php" tabindex="0" role="button" aria-label="PHP — view projects">PHP</li>
+            <li class="skill-tag lang-cpp" tabindex="0" role="button" aria-label="C/C++ — view projects">C/C++</li>
+            <li class="skill-tag lang-django" tabindex="0" role="button" aria-label="Django — view projects">Django</li>
+            <li class="skill-tag lang-typescript" tabindex="0" role="button" aria-label="TypeScript — view projects">TypeScript</li>
+            <li class="skill-tag lang-react" tabindex="0" role="button" aria-label="React — view projects">React</li>
+            <li class="skill-tag lang-node" tabindex="0" role="button" aria-label="Node.js — view projects">Node.js</li>
+            <li class="skill-tag lang-postgres" tabindex="0" role="button" aria-label="PostgreSQL — view projects">PostgreSQL</li>
+            <li class="skill-tag lang-docker" tabindex="0" role="button" aria-label="Docker — view projects">Docker</li>
+            <li class="skill-tag lang-aws" tabindex="0" role="button" aria-label="AWS — view projects">AWS</li>
+            <li class="skill-tag lang-ghactions" tabindex="0" role="button" aria-label="GitHub Actions — view projects">GitHub Actions</li>
+            <li class="skill-tag lang-linux" tabindex="0" role="button" aria-label="Linux — view projects">Linux</li>
+            <li class="skill-tag lang-datamgmt" tabindex="0" role="button" aria-label="Data Management — view projects">Data Management</li>
+            <li class="skill-tag lang-bi" tabindex="0" role="button" aria-label="BI Dashboards — view projects">BI Dashboards</li>
+            <li class="skill-tag lang-excel" tabindex="0" role="button" aria-label="Excel/VBA — view projects">Excel/VBA</li>
           </ul>
         </div>
       </section>
@@ -321,12 +370,13 @@
           <p class="section-label" aria-hidden="true">Get in touch</p>
           <h2 class="section-title" id="contact-heading">Contact</h2>
 
-          <p class="contact-text">
-            I'd love to chat! I'm happy to hear about the projects you are
-            working on or new opportunities you'd like to discuss further.
-            <br /><br />
-            My inbox is open.
-          </p>
+          <div class="contact-text">
+            <p>
+              I'd love to chat! I'm happy to hear about the projects you are
+              working on or new opportunities you'd like to discuss further.
+            </p>
+            <p>My inbox is open.</p>
+          </div>
 
           <ul class="contact-links" role="list">
             <li>
@@ -384,20 +434,26 @@
     <footer>
       <div class="container">
         <span class="footer-left"
-          ><span class="footer-copy">&copy; <time id="year">2026</time></span>
+          ><span class="footer-copy">&copy; <time id="year" datetime="2026">2026</time></span>
           <span class="footer-name">John R. Molina</span></span
         >
         <span
           class="footer-made"
-          aria-label="crafted with love in North NJ & NYC"
-          >crafted with <span class="heart">&hearts;</span> in North NJ &
-          NYC</span
+          role="img"
+          aria-label="crafted with love in North NJ and NYC"
+          >crafted with <span class="heart" aria-hidden="true">&hearts;</span> in North NJ <span class="garden" aria-hidden="true">🌿</span> &amp;
+          NYC <span class="city" aria-hidden="true">🗽</span></span
         >
       </div>
     </footer>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      (function () {
+        var yearEl = document.getElementById("year");
+        var y = new Date().getFullYear();
+        yearEl.textContent = y;
+        yearEl.setAttribute("datetime", y);
+      })();
 
       (function () {
         var btn = document.getElementById("theme-toggle");
@@ -436,11 +492,47 @@
       })();
 
       (function () {
+        var navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+        var sections = [];
+        navLinks.forEach(function (link) {
+          var sec = document.querySelector(link.getAttribute("href"));
+          if (sec) sections.push({ link: link, section: sec });
+        });
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              sections.forEach(function (item) {
+                if (item.section === entry.target) {
+                  if (entry.isIntersecting) {
+                    item.link.classList.add("active");
+                    item.link.setAttribute("aria-current", "true");
+                  } else {
+                    item.link.classList.remove("active");
+                    item.link.removeAttribute("aria-current");
+                  }
+                }
+              });
+            });
+          },
+          { rootMargin: "-50% 0px -50% 0px" },
+        );
+
+        sections.forEach(function (item) {
+          observer.observe(item.section);
+        });
+      })();
+
+      (function () {
         // Heart glitch on hover
         var heart = document.querySelector(".heart");
-        var heartOriginal = heart.textContent;
+        var city = document.querySelector(".city");
+        var garden = document.querySelector(".garden");
+        if (!heart) return;
         var heartActive = false;
         var heartTimeout;
+        var cityTimeout;
+        var gardenTimeout;
         var heartGlyphs = [
           "\u2665",
           "\u2764",
@@ -486,11 +578,59 @@
           heartTimeout = setTimeout(heartScramble, 40 + Math.random() * 50);
         }
 
+        function cityScramble() {
+          if (!heartActive || !city) return;
+          var dx = (Math.random() - 0.5) * 5;
+          var dy = (Math.random() - 0.5) * 4;
+          var scale = 0.9 + Math.random() * 0.5;
+          var rot = (Math.random() - 0.5) * 20;
+          city.style.display = "inline-block";
+          city.style.transform =
+            "translate(" +
+            dx +
+            "px," +
+            dy +
+            "px) scale(" +
+            scale +
+            ") rotate(" +
+            rot +
+            "deg)";
+          cityTimeout = setTimeout(cityScramble, 40 + Math.random() * 50);
+        }
+
+        function gardenScramble() {
+          if (!heartActive || !garden) return;
+          var dx = (Math.random() - 0.5) * 5;
+          var dy = (Math.random() - 0.5) * 4;
+          var scale = 0.9 + Math.random() * 0.5;
+          var rot = (Math.random() - 0.5) * 20;
+          garden.style.display = "inline-block";
+          garden.style.transform =
+            "translate(" +
+            dx +
+            "px," +
+            dy +
+            "px) scale(" +
+            scale +
+            ") rotate(" +
+            rot +
+            "deg)";
+          gardenTimeout = setTimeout(gardenScramble, 40 + Math.random() * 50);
+        }
+
         function heartRestore() {
           heartActive = false;
           clearTimeout(heartTimeout);
+          clearTimeout(cityTimeout);
+          clearTimeout(gardenTimeout);
           heart.style.color = "";
           heart.style.transform = "";
+          if (city) {
+            city.style.transform = "";
+          }
+          if (garden) {
+            garden.style.transform = "";
+          }
         }
 
         var footerMade = document.querySelector(".footer-made");
@@ -498,9 +638,67 @@
           footerMade.addEventListener("mouseenter", function () {
             heartActive = true;
             heartScramble();
+            cityScramble();
+            gardenScramble();
           });
           footerMade.addEventListener("mouseleave", heartRestore);
         }
+      })();
+
+      (function () {
+        function scrollToProjects() {
+          document
+            .getElementById("projects")
+            .scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        document.querySelectorAll(".skills .skill-tag").forEach(function (tag) {
+          tag.addEventListener("click", scrollToProjects);
+          tag.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              scrollToProjects();
+            }
+          });
+        });
+      })();
+
+      (function () {
+        var logo = document.querySelector(".nav-logo");
+        var original = "jrm";
+        var chars = "!@#$%^&*?~/\\|<>{}[]0123456789abcdefghijklmnopqrstuvwxyz";
+        var hovering = false;
+        var interval;
+
+        if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        function runScramble() {
+          var iterations = 0;
+          interval = setInterval(function () {
+            logo.textContent = original
+              .split("")
+              .map(function (ch, i) {
+                if (i < iterations) return original[i];
+                return chars[Math.floor(Math.random() * chars.length)];
+              })
+              .join("");
+            iterations += 1 / 3;
+            if (iterations >= original.length) {
+              clearInterval(interval);
+              if (hovering) runScramble();
+            }
+          }, 40);
+        }
+
+        logo.addEventListener("mouseenter", function () {
+          hovering = true;
+          runScramble();
+        });
+
+        logo.addEventListener("mouseleave", function () {
+          hovering = false;
+          clearInterval(interval);
+          logo.textContent = original;
+        });
       })();
     </script>
   </body>
