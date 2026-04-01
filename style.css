@@ -23,10 +23,9 @@
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --bg: radial-gradient(ellipse at 15% 15%, #fcd4a0 0%, transparent 55%),
-      radial-gradient(ellipse at 85% 30%, #f8a8b8 0%, transparent 45%),
-      radial-gradient(ellipse at 50% 90%, #e8c0f0 0%, transparent 40%),
-      linear-gradient(160deg, #fef0d8 0%, #fde0c8 25%, #fcd0c0 50%, #f8c8d8 75%, #f4d0e8 100%);
+    --bg: radial-gradient(ellipse at 20% 20%, rgba(210, 220, 235, 0.5) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(200, 215, 230, 0.4) 0%, transparent 45%),
+      linear-gradient(160deg, #f8f9fb 0%, #f2f4f8 25%, #eef1f5 50%, #f0f2f6 75%, #f5f6f9 100%);
     --nav-bg: #ffffff;
     --surface: #f0f0f0;
     --border: #e0e0e0;
@@ -49,10 +48,9 @@
 }
 
 [data-theme="light"] {
-  --bg: radial-gradient(ellipse at 15% 15%, #fcd4a0 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 30%, #f8a8b8 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 90%, #e8c0f0 0%, transparent 40%),
-    linear-gradient(160deg, #fef0d8 0%, #fde0c8 25%, #fcd0c0 50%, #f8c8d8 75%, #f4d0e8 100%);
+  --bg: radial-gradient(ellipse at 20% 20%, rgba(210, 220, 235, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(200, 215, 230, 0.4) 0%, transparent 45%),
+    linear-gradient(160deg, #f8f9fb 0%, #f2f4f8 25%, #eef1f5 50%, #f0f2f6 75%, #f5f6f9 100%);
   --nav-bg: #ffffff;
   --surface: #f0f0f0;
   --border: #e0e0e0;
@@ -551,16 +549,33 @@ nav .container {
 
 .project-card {
   display: block;
+  position: relative;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   text-decoration: none;
   transition: background 0.15s;
+  cursor: pointer;
 }
 
 .project-card:hover {
   background: rgba(255, 255, 255, 0.08);
+}
+
+/* Overlay link covers the card for clickability while allowing text selection */
+.project-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Raise text content above the overlay so it's selectable */
+.project-header,
+.project-desc,
+.project-tags {
+  position: relative;
+  z-index: 1;
 }
 
 @media (prefers-color-scheme: light) {
@@ -735,9 +750,9 @@ nav .container {
   background: rgba(249, 168, 37, 0.14);
 }
 .lang-ghactions {
-  color: #a0a0a0;
-  border-color: rgba(160, 160, 160, 0.5);
-  background: rgba(160, 160, 160, 0.14);
+  color: #3b82f6;
+  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.14);
 }
 .lang-linux {
   color: #fbbf24;
@@ -760,14 +775,14 @@ nav .container {
   background: rgba(167, 139, 250, 0.14);
 }
 .lang-datamgmt {
-  color: #34d399;
-  border-color: rgba(52, 211, 153, 0.5);
-  background: rgba(52, 211, 153, 0.14);
+  color: #f5a623;
+  border-color: rgba(245, 166, 35, 0.5);
+  background: rgba(245, 166, 35, 0.14);
 }
 .lang-bi {
-  color: #f472b6;
-  border-color: rgba(244, 114, 182, 0.5);
-  background: rgba(244, 114, 182, 0.14);
+  color: #818cf8;
+  border-color: rgba(129, 140, 248, 0.5);
+  background: rgba(129, 140, 248, 0.14);
 }
 .lang-excel {
   color: #4ade80;
@@ -898,9 +913,9 @@ nav .container {
 }
 [data-theme="light"] .lang-ghactions,
 :root:not([data-theme="dark"]) .lang-ghactions {
-  color: #666666;
-  border-color: rgba(100, 100, 100, 0.35);
-  background: rgba(100, 100, 100, 0.08);
+  color: #2563eb;
+  border-color: rgba(37, 99, 235, 0.35);
+  background: rgba(37, 99, 235, 0.08);
 }
 [data-theme="light"] .lang-linux,
 :root:not([data-theme="dark"]) .lang-linux {
@@ -929,15 +944,15 @@ nav .container {
 }
 [data-theme="light"] .lang-datamgmt,
 :root:not([data-theme="dark"]) .lang-datamgmt {
-  color: #059669;
-  border-color: rgba(5, 150, 105, 0.35);
-  background: rgba(5, 150, 105, 0.08);
+  color: #b45309;
+  border-color: rgba(180, 83, 9, 0.35);
+  background: rgba(180, 83, 9, 0.08);
 }
 [data-theme="light"] .lang-bi,
 :root:not([data-theme="dark"]) .lang-bi {
-  color: #db2777;
-  border-color: rgba(219, 39, 119, 0.35);
-  background: rgba(219, 39, 119, 0.08);
+  color: #4f46e5;
+  border-color: rgba(79, 70, 229, 0.35);
+  background: rgba(79, 70, 229, 0.08);
 }
 [data-theme="light"] .lang-excel,
 :root:not([data-theme="dark"]) .lang-excel {
