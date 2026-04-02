@@ -1106,6 +1106,31 @@ nav .container {
   background: rgba(255, 255, 255, 0.4);
 }
 
+/* ─── Back to Top ───────────────────────────────────────────── */
+.to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--nav-bg);
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 90;
+}
+
+.to-top:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 /* ─── Footer ────────────────────────────────────────────────── */
 footer {
   padding: 2rem 0;

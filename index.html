@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <meta
       name="description"
       content="Portfolio of John Molina, Software Engineer based in NJ."
@@ -27,6 +28,7 @@
         var t = localStorage.getItem("theme");
         if (t === "light" || t === "dark")
           document.documentElement.setAttribute("data-theme", t);
+        else localStorage.removeItem("theme");
       })();
     </script>
   </head>
@@ -42,7 +44,6 @@
             >jrm</a
           >
           <ul class="nav-links" role="list">
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
@@ -103,9 +104,8 @@
                 197K donors and 159K engaged alumni.
               </p>
               <p>
-                I'm currently building projects in C/C++, Python, SQL, and
-                JavaScript while strengthening my data structures and algorithms
-                skills through MIT OpenCourseWare.
+                I'm currently carving out space and time for a solid foundation
+                in data structures and algorithms.
               </p>
             </div>
             <div class="hero-links">
@@ -567,6 +567,17 @@
       </section>
     </main>
 
+    <!-- ── Back to Top ──────────────────────────────────────────── -->
+    <button
+      id="to-top"
+      type="button"
+      aria-label="Back to top"
+      class="to-top"
+      hidden
+    >
+      &uarr;
+    </button>
+
     <!-- ── Footer ─────────────────────────────────────────────── -->
     <footer>
       <div class="container">
@@ -599,35 +610,60 @@
       (function () {
         var btn = document.getElementById("theme-toggle");
         var root = document.documentElement;
+        var modes = ["auto", "light", "dark"];
 
-        function getEffective() {
-          return (
-            root.getAttribute("data-theme") ||
-            (matchMedia("(prefers-color-scheme: light)").matches
-              ? "light"
-              : "dark")
-          );
+        function getStored() {
+          var t = localStorage.getItem("theme");
+          return t === "light" || t === "dark" ? t : "auto";
+        }
+
+        function getEffective(mode) {
+          if (mode === "light" || mode === "dark") return mode;
+          return matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark";
+        }
+
+        function apply(mode) {
+          if (mode === "auto") {
+            root.removeAttribute("data-theme");
+            localStorage.removeItem("theme");
+          } else {
+            root.setAttribute("data-theme", mode);
+            localStorage.setItem("theme", mode);
+          }
         }
 
         function updateLabel() {
-          var current = getEffective();
-          btn.textContent = current === "dark" ? "☀️" : "🌙";
-          btn.setAttribute(
-            "aria-label",
-            "Switch to " + (current === "dark" ? "light" : "dark") + " theme",
-          );
+          var mode = getStored();
+          var effective = getEffective(mode);
+          var icons = {
+            auto: "\uD83C\uDF17",
+            light: "\u2600\uFE0F",
+            dark: "\uD83C\uDF19",
+          };
+          var labels = {
+            auto: "Theme: auto (system) — click for light",
+            light: "Theme: light — click for dark",
+            dark: "Theme: dark — click for auto",
+          };
+          btn.textContent = icons[mode];
+          btn.setAttribute("aria-label", labels[mode]);
         }
 
         btn.addEventListener("click", function () {
-          var next = getEffective() === "dark" ? "light" : "dark";
-          root.setAttribute("data-theme", next);
-          localStorage.setItem("theme", next);
+          var current = getStored();
+          var next = modes[(modes.indexOf(current) + 1) % modes.length];
+          apply(next);
           updateLabel();
         });
 
         matchMedia("(prefers-color-scheme: light)").addEventListener(
           "change",
-          updateLabel,
+          function () {
+            if (getStored() === "auto") apply("auto");
+            updateLabel();
+          },
         );
         updateLabel();
       })();
@@ -663,6 +699,7 @@
           observer.observe(item.section);
         });
       })();
+
 
       (function () {
         // Heart glitch on hover
@@ -801,6 +838,18 @@
             }
           });
         });
+      })();
+
+      (function () {
+        var toTop = document.getElementById("to-top");
+        function toggle() {
+          toTop.hidden = window.scrollY < 400;
+        }
+        window.addEventListener("scroll", toggle, { passive: true });
+        toTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        toggle();
       })();
 
       (function () {
