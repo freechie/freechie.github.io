@@ -10,7 +10,7 @@
     <title>John R. Molina</title>
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨🏽‍💻</text></svg>"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💾</text></svg>"
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="John R. Molina" />
@@ -25,7 +25,8 @@
     <script>
       (function () {
         var t = localStorage.getItem("theme");
-        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+        if (t === "light" || t === "dark")
+          document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
   </head>
@@ -44,7 +45,25 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://github.com/richtxteditor/richtxteditor.github.io" target="_blank" rel="noopener" aria-label="GitHub repository (opens in new tab)" class="nav-github"><svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a></li>
+            <li>
+              <a
+                href="https://github.com/richtxteditor/richtxteditor.github.io"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub repository (opens in new tab)"
+                class="nav-github"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"
+                  /></svg
+              ></a>
+            </li>
             <li>
               <button
                 id="theme-toggle"
@@ -73,20 +92,20 @@
             <p class="hero-title">Software Engineer</p>
             <div class="hero-bio">
               <p>
-                Hello! I'm a software engineer with a B.S. in Computer
-                Science and experience in data management, database
-                systems, and full-stack web development.
+                Hello! I'm a software engineer with a B.S. in Computer Science
+                and experience in data management, database systems, and
+                full-stack web development.
               </p>
               <p>
                 At Columbia University, I supported The Columbia Commitment
-                fundraising campaign through data quality, platform
-                maintenance, and reporting. The campaign raised $5.48B
-                by 2022, with over 197K donors and 159K engaged alumni.
+                fundraising campaign through data quality, platform maintenance,
+                and reporting. The campaign raised $5.48B by 2022, with over
+                197K donors and 159K engaged alumni.
               </p>
               <p>
-                I'm currently building projects in C/C++, Python, SQL,
-                and JavaScript while strengthening my data structures
-                and algorithms skills through MIT OpenCourseWare.
+                I'm currently building projects in C/C++, Python, SQL, and
+                JavaScript while strengthening my data structures and algorithms
+                skills through MIT OpenCourseWare.
               </p>
             </div>
             <div class="hero-links">
@@ -129,18 +148,15 @@
                 aria-label="Academic Affiliated Name Match — Columbia University (opens in new tab)"
               ></a>
               <div class="project-header">
-                <span class="project-name"
-                  >Academic Affiliated Name Match</span
-                >
+                <span class="project-name">Academic Affiliated Name Match</span>
               </div>
               <p class="project-desc">
-                Built preemptive deduplication workflows for admissions
-                cycles at an Ivy League university, scoring records across
-                eight dimensions (name, gender, age, employer, email,
-                address, spouse, degree) to prevent duplicates in a 5M+
-                record database. Developed PL/SQL views, reports, and BI
-                dashboards, using CSVs and spreadsheets for both automated
-                and manual data review.
+                Built preemptive deduplication workflows for admissions cycles
+                at an Ivy League university, scoring records across eight
+                dimensions (name, gender, age, employer, email, address, spouse,
+                degree) to prevent duplicates in a 5M+ record database.
+                Developed PL/SQL views, reports, and BI dashboards, using CSVs
+                and spreadsheets for both automated and manual data review.
               </p>
               <div class="project-tags" aria-hidden="true">
                 <span class="skill-tag lang-sql">SQL</span>
@@ -195,8 +211,7 @@
               </div>
               <p class="project-desc">
                 Single-page reference for a terminal-centric dev environment
-                built around Zsh, Tmux, and Neovim. Documents my dotfiles
-                setup.
+                built around Zsh, Tmux, and Neovim. Documents my dotfiles setup.
               </p>
               <div class="project-tags" aria-hidden="true">
                 <span class="skill-tag lang-html">HTML</span>
@@ -245,8 +260,8 @@
               </div>
               <p class="project-desc">
                 Multithreaded chat application built over TCP/IP using Linux
-                sockets. Handles persistent connections, message parsing,
-                and data transmission with JUnit tests.
+                sockets. Handles persistent connections, message parsing, and
+                data transmission with JUnit tests.
               </p>
               <div class="project-tags" aria-hidden="true">
                 <span class="skill-tag lang-java">Java</span>
@@ -271,9 +286,8 @@
                 >
               </div>
               <p class="project-desc">
-                Data visualizations connecting global events to economic
-                trends. Built as a data science capstone at Montclair
-                State University.
+                Data visualizations connecting global events to economic trends.
+                Built as a data science capstone at Montclair State University.
               </p>
               <div class="project-tags" aria-hidden="true">
                 <span class="skill-tag lang-python">Python</span>
@@ -304,7 +318,6 @@
                 <span class="skill-tag lang-sql">MySQL</span>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -316,52 +329,175 @@
 
           <div class="about-body">
             <p>
-              I'm a software engineer based in New Jersey and New York
-              with a B.S. in Computer Science and experience in data
-              management, database systems, and full-stack web
-              development.
+              I'm a software engineer based in New Jersey and New York with a
+              B.S. in Computer Science and experience in data management,
+              database systems, and full-stack web development.
             </p>
             <p>
-              Until 2022, I worked with Columbia University's Data
-              Management Group, maintaining Athena, the system of record
-              for 5M+ alumni, donors, and organizations. I exported,
-              cleaned, and re-imported data using SQL, Python, and Excel,
-              built PL/SQL views for reporting, and mapped family
-              relationships to support multi-generational outreach. I
-              also audited records, integrated external data sources, and
-              helped reduce the "lost" constituent
-              population (those with no active contact info or who may
-              be deceased) from 18% in 2017 to under 4% by 2022.
+              Until 2022, I worked with Columbia University's Data Management
+              Group, maintaining Athena, the system of record for 5M+ alumni,
+              donors, and organizations. I exported, cleaned, and re-imported
+              data using SQL, Python, and Excel, built PL/SQL views for
+              reporting, and mapped family relationships to support
+              multi-generational outreach. I also audited records, integrated
+              external data sources, and helped reduce the "lost" constituent
+              population (those with no active contact info or who may be
+              deceased) from 18% in 2017 to under 4% by 2022.
             </p>
             <p>
-              I contributed to data governance, reporting, and BI
-              dashboards that supported The Columbia Commitment campaign,
-              which raised $5.48B. I'm currently building projects in
-              C/C++, Python, and JavaScript while continuing to
-              strengthen my data structures and algorithms skills through MIT
-              OpenCourseWare.
+              I contributed to data governance, reporting, and BI dashboards
+              that supported The Columbia Commitment campaign, which raised
+              $5.48B. I'm currently building projects in C/C++, Python, and
+              JavaScript while continuing to strengthen my data structures and
+              algorithms skills through MIT OpenCourseWare.
             </p>
           </div>
 
           <ul class="skills" role="list" aria-label="Technical skills">
-            <li class="skill-tag lang-python" tabindex="0" role="button" aria-label="Python — view projects">Python</li>
-            <li class="skill-tag lang-sql" tabindex="0" role="button" aria-label="SQL — view projects">SQL</li>
-            <li class="skill-tag lang-javascript" tabindex="0" role="button" aria-label="JavaScript — view projects">JavaScript</li>
-            <li class="skill-tag lang-java" tabindex="0" role="button" aria-label="Java — view projects">Java</li>
-            <li class="skill-tag lang-php" tabindex="0" role="button" aria-label="PHP — view projects">PHP</li>
-            <li class="skill-tag lang-cpp" tabindex="0" role="button" aria-label="C/C++ — view projects">C/C++</li>
-            <li class="skill-tag lang-django" tabindex="0" role="button" aria-label="Django — view projects">Django</li>
-            <li class="skill-tag lang-typescript" tabindex="0" role="button" aria-label="TypeScript — view projects">TypeScript</li>
-            <li class="skill-tag lang-react" tabindex="0" role="button" aria-label="React — view projects">React</li>
-            <li class="skill-tag lang-node" tabindex="0" role="button" aria-label="Node.js — view projects">Node.js</li>
-            <li class="skill-tag lang-postgres" tabindex="0" role="button" aria-label="PostgreSQL — view projects">PostgreSQL</li>
-            <li class="skill-tag lang-docker" tabindex="0" role="button" aria-label="Docker — view projects">Docker</li>
-            <li class="skill-tag lang-aws" tabindex="0" role="button" aria-label="AWS — view projects">AWS</li>
-            <li class="skill-tag lang-ghactions" tabindex="0" role="button" aria-label="GitHub Actions — view projects">GitHub Actions</li>
-            <li class="skill-tag lang-linux" tabindex="0" role="button" aria-label="Linux — view projects">Linux</li>
-            <li class="skill-tag lang-datamgmt" tabindex="0" role="button" aria-label="Data Management — view projects">Data Management</li>
-            <li class="skill-tag lang-bi" tabindex="0" role="button" aria-label="BI Dashboards — view projects">BI Dashboards</li>
-            <li class="skill-tag lang-excel" tabindex="0" role="button" aria-label="Excel/VBA — view projects">Excel/VBA</li>
+            <li
+              class="skill-tag lang-python"
+              tabindex="0"
+              role="button"
+              aria-label="Python — view projects"
+            >
+              Python
+            </li>
+            <li
+              class="skill-tag lang-sql"
+              tabindex="0"
+              role="button"
+              aria-label="SQL — view projects"
+            >
+              SQL
+            </li>
+            <li
+              class="skill-tag lang-javascript"
+              tabindex="0"
+              role="button"
+              aria-label="JavaScript — view projects"
+            >
+              JavaScript
+            </li>
+            <li
+              class="skill-tag lang-java"
+              tabindex="0"
+              role="button"
+              aria-label="Java — view projects"
+            >
+              Java
+            </li>
+            <li
+              class="skill-tag lang-php"
+              tabindex="0"
+              role="button"
+              aria-label="PHP — view projects"
+            >
+              PHP
+            </li>
+            <li
+              class="skill-tag lang-cpp"
+              tabindex="0"
+              role="button"
+              aria-label="C/C++ — view projects"
+            >
+              C/C++
+            </li>
+            <li
+              class="skill-tag lang-django"
+              tabindex="0"
+              role="button"
+              aria-label="Django — view projects"
+            >
+              Django
+            </li>
+            <li
+              class="skill-tag lang-typescript"
+              tabindex="0"
+              role="button"
+              aria-label="TypeScript — view projects"
+            >
+              TypeScript
+            </li>
+            <li
+              class="skill-tag lang-react"
+              tabindex="0"
+              role="button"
+              aria-label="React — view projects"
+            >
+              React
+            </li>
+            <li
+              class="skill-tag lang-node"
+              tabindex="0"
+              role="button"
+              aria-label="Node.js — view projects"
+            >
+              Node.js
+            </li>
+            <li
+              class="skill-tag lang-postgres"
+              tabindex="0"
+              role="button"
+              aria-label="PostgreSQL — view projects"
+            >
+              PostgreSQL
+            </li>
+            <li
+              class="skill-tag lang-docker"
+              tabindex="0"
+              role="button"
+              aria-label="Docker — view projects"
+            >
+              Docker
+            </li>
+            <li
+              class="skill-tag lang-aws"
+              tabindex="0"
+              role="button"
+              aria-label="AWS — view projects"
+            >
+              AWS
+            </li>
+            <li
+              class="skill-tag lang-ghactions"
+              tabindex="0"
+              role="button"
+              aria-label="GitHub Actions — view projects"
+            >
+              GitHub Actions
+            </li>
+            <li
+              class="skill-tag lang-linux"
+              tabindex="0"
+              role="button"
+              aria-label="Linux — view projects"
+            >
+              Linux
+            </li>
+            <li
+              class="skill-tag lang-datamgmt"
+              tabindex="0"
+              role="button"
+              aria-label="Data Management — view projects"
+            >
+              Data Management
+            </li>
+            <li
+              class="skill-tag lang-bi"
+              tabindex="0"
+              role="button"
+              aria-label="BI Dashboards — view projects"
+            >
+              BI Dashboards
+            </li>
+            <li
+              class="skill-tag lang-excel"
+              tabindex="0"
+              role="button"
+              aria-label="Excel/VBA — view projects"
+            >
+              Excel/VBA
+            </li>
           </ul>
         </div>
       </section>
@@ -374,8 +510,8 @@
 
           <div class="contact-text">
             <p>
-              Open to new opportunities and always happy to talk shop.
-              Feel free to reach out.
+              Open to new opportunities and always happy to talk shop. Feel free
+              to reach out.
             </p>
           </div>
 
@@ -435,15 +571,19 @@
     <footer>
       <div class="container">
         <span class="footer-left"
-          ><span class="footer-copy">&copy; <time id="year" datetime="2026">2026</time></span>
+          ><span class="footer-copy"
+            >&copy; <time id="year" datetime="2026">2026</time></span
+          >
           <span class="footer-name">John R. Molina</span></span
         >
         <span
           class="footer-made"
           role="img"
           aria-label="crafted with love in North NJ and NYC"
-          >crafted with <span class="heart" aria-hidden="true">&hearts;</span> in North NJ <span class="garden" aria-hidden="true">🌿</span> &amp;
-          NYC <span class="city" aria-hidden="true">🗽</span></span
+          >crafted with
+          <span class="heart" aria-hidden="true">&hearts;</span> in North NJ
+          <span class="garden" aria-hidden="true">🌿</span> &amp; NYC
+          <span class="city" aria-hidden="true">🗽</span></span
         >
       </div>
     </footer>
