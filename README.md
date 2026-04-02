@@ -4,6 +4,10 @@ Personal portfolio site for John Molina — software engineer based in NJ.
 
 **Live:** [richtxteditor.github.io](https://richtxteditor.github.io)
 
+**DevTool Keybinds:** [richtxteditor.github.io/devtools](https://richtxteditor.github.io/devtools)
+
+**DSA Topic Tracker:** [richtxteditor.github.io/dsa](https://richtxteditor.github.io/dsa)
+
 ## Stack
 
 - HTML + CSS (no frameworks, no JavaScript dependencies)
