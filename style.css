@@ -117,6 +117,18 @@ body {
   top: 1rem;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ─── Focus Styles ───────────────────────────────────────────── */
 :focus-visible {
   outline: 2px solid var(--text);
@@ -548,14 +560,14 @@ nav .container {
 }
 
 /* Project card focus — inset outline so it's visible within the clipped grid */
-.project-card:focus-visible {
+.project-card-link:focus-visible {
+  outline: 2px solid var(--text);
   outline-offset: -3px;
 }
 
 .project-card {
   display: block;
   position: relative;
-  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -568,19 +580,19 @@ nav .container {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Overlay link covers the card for clickability while allowing text selection */
-.project-card-link {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+.project-card:focus-within {
+  background: rgba(255, 255, 255, 0.08);
 }
 
-/* Raise text content above the overlay so it's selectable */
-.project-header,
-.project-desc,
-.project-tags {
-  position: relative;
-  z-index: 1;
+.project-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {
@@ -592,6 +604,9 @@ nav .container {
   :root:not([data-theme="dark"]) .project-card:hover {
     background: rgba(255, 255, 255, 0.25);
   }
+  :root:not([data-theme="dark"]) .project-card:focus-within {
+    background: rgba(255, 255, 255, 0.25);
+  }
 }
 
 [data-theme="light"] .project-card {
@@ -601,6 +616,10 @@ nav .container {
 }
 
 [data-theme="light"] .project-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+[data-theme="light"] .project-card:focus-within {
   background: rgba(255, 255, 255, 0.25);
 }
 
@@ -617,6 +636,15 @@ nav .container {
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.project-card-link:hover .project-name,
+.project-card-link:focus-visible .project-name {
+  text-decoration-color: currentColor;
 }
 
 .project-lang {
@@ -642,7 +670,7 @@ nav .container {
 .project-tags .skill-tag {
   font-size: 0.65rem;
   padding: 0.2rem 0.5rem;
-  cursor: default;
+  cursor: inherit;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
@@ -667,7 +695,15 @@ nav .container {
   list-style: none;
 }
 
+.skills li {
+  list-style: none;
+}
+
 .skill-tag {
+  appearance: none;
+  -webkit-appearance: none;
+  border-width: 1.5px;
+  border-style: solid;
   font-family: var(--font);
   font-size: 0.75rem;
   font-weight: 500;
@@ -675,11 +711,11 @@ nav .container {
   min-height: 32px;
   display: inline-flex;
   align-items: center;
-  border: 1.5px solid var(--border);
   border-radius: 5px;
   color: var(--dim);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  background-clip: padding-box;
   cursor: pointer;
   transition: transform 0.15s, background 0.15s;
 }

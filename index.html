@@ -81,6 +81,8 @@
       <!-- ── Hero ─────────────────────────────────────────────── -->
       <section id="hero" aria-labelledby="hero-heading">
         <div class="container hero-container">
+          <span class="sr-only" id="new-tab-note">Opens in a new tab.</span>
+          <span class="sr-only" id="pdf-note">PDF document.</span>
           <img
             src="prof_pic.png"
             alt="Photo of John Molina"
@@ -114,7 +116,7 @@
                 class="btn btn-github"
                 target="_blank"
                 rel="noopener"
-                aria-label="GitHub profile (opens in new tab)"
+                aria-describedby="new-tab-note"
                 >GitHub</a
               >
               <a
@@ -122,7 +124,7 @@
                 class="btn btn-resume"
                 target="_blank"
                 rel="noopener"
-                aria-label="Resume (opens as PDF in new tab)"
+                aria-describedby="pdf-note new-tab-note"
                 >Resume</a
               >
               <a href="#contact" class="btn btn-contact">Contact</a>
@@ -136,6 +138,9 @@
         <div class="container">
           <p class="section-label" aria-hidden="true">Work</p>
           <h2 class="section-title" id="projects-heading">Projects</h2>
+          <span class="sr-only" id="projects-new-tab-note"
+            >Opens in a new tab.</span
+          >
 
           <div class="projects-grid" role="list">
             <div class="project-card" role="listitem">
@@ -144,27 +149,31 @@
                 class="project-card-link"
                 target="_blank"
                 rel="noopener"
-                aria-label="Academic Affiliated Name Match — Columbia University (opens in new tab)"
-              ></a>
-              <div class="project-header">
-                <span class="project-name">Academic Affiliated Name Match</span>
-              </div>
-              <p class="project-desc">
-                Built preemptive deduplication workflows for admissions cycles
-                at an Ivy League university, scoring records across eight
-                dimensions (name, gender, age, employer, email, address, spouse,
-                degree) to prevent duplicates in a 5M+ record database.
-                Developed PL/SQL views, reports, and BI dashboards, using CSVs
-                and spreadsheets for both automated and manual data review.
-              </p>
-              <div class="project-tags" aria-hidden="true">
-                <span class="skill-tag lang-sql">SQL</span>
-                <span class="skill-tag lang-python">Python</span>
-                <span class="skill-tag lang-java">Java</span>
-                <span class="skill-tag lang-datamgmt">Data Management</span>
-                <span class="skill-tag lang-bi">BI Dashboards</span>
-                <span class="skill-tag lang-excel">Excel/VBA</span>
-              </div>
+                aria-labelledby="project-aanm-name"
+                aria-describedby="project-aanm-desc projects-new-tab-note"
+              >
+                <div class="project-header">
+                  <span class="project-name" id="project-aanm-name"
+                    >Academic Affiliated Name Match</span
+                  >
+                </div>
+                <p class="project-desc" id="project-aanm-desc">
+                  Built preemptive deduplication workflows for admissions cycles
+                  at an Ivy League university, scoring records across eight
+                  dimensions (name, gender, age, employer, email, address, spouse,
+                  degree) to prevent duplicates in a 5M+ record database.
+                  Developed PL/SQL views, reports, and BI dashboards, using CSVs
+                  and spreadsheets for both automated and manual data review.
+                </p>
+                <div class="project-tags" aria-hidden="true">
+                  <span class="skill-tag lang-sql">SQL</span>
+                  <span class="skill-tag lang-python">Python</span>
+                  <span class="skill-tag lang-java">Java</span>
+                  <span class="skill-tag lang-datamgmt">Data Management</span>
+                  <span class="skill-tag lang-bi">BI Dashboards</span>
+                  <span class="skill-tag lang-excel">Excel/VBA</span>
+                </div>
+              </a>
             </div>
 
             <div class="project-card" role="listitem">
@@ -173,28 +182,30 @@
                 class="project-card-link"
                 target="_blank"
                 rel="noopener"
-                aria-label="DSA & Interview Prep Tracker — view site (opens in new tab)"
-              ></a>
-              <div class="project-header">
-                <span class="project-name"
-                  >DSA &amp; Interview Prep Tracker</span
-                >
-              </div>
-              <p class="project-desc">
-                Structured study plan built around MIT 6.006, CLRS 4th Edition,
-                and LeetCode. A CS refresher for technical interview
-                preparation.
-              </p>
-              <div class="project-tags" aria-hidden="true">
-                <span class="skill-tag lang-cpp">C</span>
-                <span class="skill-tag lang-cpp">C++</span>
-                <span class="skill-tag lang-python">Python</span>
-                <span class="skill-tag lang-html">HTML</span>
-                <span class="skill-tag lang-css">CSS</span>
-                <span class="skill-tag lang-javascript">JavaScript</span>
-                <span class="skill-tag lang-sql">MySQL</span>
-                <span class="skill-tag lang-ghactions">GitHub Actions</span>
-              </div>
+                aria-labelledby="project-dsa-name"
+                aria-describedby="project-dsa-desc projects-new-tab-note"
+              >
+                <div class="project-header">
+                  <span class="project-name" id="project-dsa-name"
+                    >DSA &amp; Interview Prep Tracker</span
+                  >
+                </div>
+                <p class="project-desc" id="project-dsa-desc">
+                  Structured study plan built around MIT 6.006, CLRS 4th Edition,
+                  and LeetCode. A CS refresher for technical interview
+                  preparation.
+                </p>
+                <div class="project-tags" aria-hidden="true">
+                  <span class="skill-tag lang-cpp">C</span>
+                  <span class="skill-tag lang-cpp">C++</span>
+                  <span class="skill-tag lang-python">Python</span>
+                  <span class="skill-tag lang-html">HTML</span>
+                  <span class="skill-tag lang-css">CSS</span>
+                  <span class="skill-tag lang-javascript">JavaScript</span>
+                  <span class="skill-tag lang-sql">MySQL</span>
+                  <span class="skill-tag lang-ghactions">GitHub Actions</span>
+                </div>
+              </a>
             </div>
 
             <div class="project-card" role="listitem">
@@ -203,22 +214,26 @@
                 class="project-card-link"
                 target="_blank"
                 rel="noopener"
-                aria-label="DevTools Cheat Sheet — view site (opens in new tab)"
-              ></a>
-              <div class="project-header">
-                <span class="project-name">DevTools Cheat Sheet</span>
-              </div>
-              <p class="project-desc">
-                Single-page reference for a terminal-centric dev environment
-                built around Zsh, Tmux, and Neovim. Documents my dotfiles setup.
-              </p>
-              <div class="project-tags" aria-hidden="true">
-                <span class="skill-tag lang-html">HTML</span>
-                <span class="skill-tag lang-css">CSS</span>
-                <span class="skill-tag lang-javascript">JavaScript</span>
-                <span class="skill-tag lang-sql">MySQL</span>
-                <span class="skill-tag lang-ghactions">GitHub Actions</span>
-              </div>
+                aria-labelledby="project-devtools-name"
+                aria-describedby="project-devtools-desc projects-new-tab-note"
+              >
+                <div class="project-header">
+                  <span class="project-name" id="project-devtools-name"
+                    >DevTools Cheat Sheet</span
+                  >
+                </div>
+                <p class="project-desc" id="project-devtools-desc">
+                  Single-page reference for a terminal-centric dev environment
+                  built around Zsh, Tmux, and Neovim. Documents my dotfiles setup.
+                </p>
+                <div class="project-tags" aria-hidden="true">
+                  <span class="skill-tag lang-html">HTML</span>
+                  <span class="skill-tag lang-css">CSS</span>
+                  <span class="skill-tag lang-javascript">JavaScript</span>
+                  <span class="skill-tag lang-sql">MySQL</span>
+                  <span class="skill-tag lang-ghactions">GitHub Actions</span>
+                </div>
+              </a>
             </div>
 
             <div class="project-card" role="listitem">
@@ -227,23 +242,27 @@
                 class="project-card-link"
                 target="_blank"
                 rel="noopener"
-                aria-label="Fusion Manaba — view on GitHub (opens in new tab)"
-              ></a>
-              <div class="project-header">
-                <span class="project-name">Fusion Manaba</span>
-              </div>
-              <p class="project-desc">
-                Full-stack TypeScript e-commerce platform for home-baked goods.
-                Built with Next.js, Prisma, and PostgreSQL.
-              </p>
-              <div class="project-tags" aria-hidden="true">
-                <span class="skill-tag lang-typescript">TypeScript</span>
-                <span class="skill-tag lang-react">Next.js</span>
-                <span class="skill-tag lang-postgres">PostgreSQL</span>
-                <span class="skill-tag lang-sql">MySQL</span>
-                <span class="skill-tag lang-docker">Docker</span>
-                <span class="skill-tag lang-ghactions">GitHub Actions</span>
-              </div>
+                aria-labelledby="project-fusion-name"
+                aria-describedby="project-fusion-desc projects-new-tab-note"
+              >
+                <div class="project-header">
+                  <span class="project-name" id="project-fusion-name"
+                    >Fusion Manaba</span
+                  >
+                </div>
+                <p class="project-desc" id="project-fusion-desc">
+                  Full-stack TypeScript e-commerce platform for home-baked goods.
+                  Built with Next.js, Prisma, and PostgreSQL.
+                </p>
+                <div class="project-tags" aria-hidden="true">
+                  <span class="skill-tag lang-typescript">TypeScript</span>
+                  <span class="skill-tag lang-react">Next.js</span>
+                  <span class="skill-tag lang-postgres">PostgreSQL</span>
+                  <span class="skill-tag lang-sql">MySQL</span>
+                  <span class="skill-tag lang-docker">Docker</span>
+                  <span class="skill-tag lang-ghactions">GitHub Actions</span>
+                </div>
+              </a>
             </div>
 
             <div class="project-card" role="listitem">
@@ -252,23 +271,27 @@
                 class="project-card-link"
                 target="_blank"
                 rel="noopener"
-                aria-label="Client/Server Chat System — view on GitHub (opens in new tab)"
-              ></a>
-              <div class="project-header">
-                <span class="project-name">Client/Server Chat System</span>
-              </div>
-              <p class="project-desc">
-                Multithreaded chat application built over TCP/IP using Linux
-                sockets. Handles persistent connections, message parsing, and
-                data transmission with JUnit tests.
-              </p>
-              <div class="project-tags" aria-hidden="true">
-                <span class="skill-tag lang-java">Java</span>
-                <span class="skill-tag lang-cpp">C</span>
-                <span class="skill-tag lang-linux">Linux</span>
-                <span class="skill-tag lang-sql">MySQL</span>
-                <span class="skill-tag lang-docker">Docker</span>
-              </div>
+                aria-labelledby="project-chat-name"
+                aria-describedby="project-chat-desc projects-new-tab-note"
+              >
+                <div class="project-header">
+                  <span class="project-name" id="project-chat-name"
+                    >Client/Server Chat System</span
+                  >
+                </div>
+                <p class="project-desc" id="project-chat-desc">
+                  Multithreaded chat application built over TCP/IP using Linux
+                  sockets. Handles persistent connections, message parsing, and
+                  data transmission with JUnit tests.
+                </p>
+                <div class="project-tags" aria-hidden="true">
+                  <span class="skill-tag lang-java">Java</span>
+                  <span class="skill-tag lang-cpp">C</span>
+                  <span class="skill-tag lang-linux">Linux</span>
+                  <span class="skill-tag lang-sql">MySQL</span>
+                  <span class="skill-tag lang-docker">Docker</span>
+                </div>
+              </a>
             </div>
 
             <div class="project-card" role="listitem">
@@ -277,22 +300,24 @@
                 class="project-card-link"
                 target="_blank"
                 rel="noopener"
-                aria-label="Global Economic Impact Analysis — view on GitHub (opens in new tab)"
-              ></a>
-              <div class="project-header">
-                <span class="project-name"
-                  >Global Economic Impact Analysis</span
-                >
-              </div>
-              <p class="project-desc">
-                Data visualizations connecting global events to economic trends.
-                Built as a data science capstone at Montclair State University.
-              </p>
-              <div class="project-tags" aria-hidden="true">
-                <span class="skill-tag lang-python">Python</span>
-                <span class="skill-tag lang-jupyter">Jupyter</span>
-                <span class="skill-tag lang-sql">MySQL</span>
-              </div>
+                aria-labelledby="project-global-name"
+                aria-describedby="project-global-desc projects-new-tab-note"
+              >
+                <div class="project-header">
+                  <span class="project-name" id="project-global-name"
+                    >Global Economic Impact Analysis</span
+                  >
+                </div>
+                <p class="project-desc" id="project-global-desc">
+                  Data visualizations connecting global events to economic trends.
+                  Built as a data science capstone at Montclair State University.
+                </p>
+                <div class="project-tags" aria-hidden="true">
+                  <span class="skill-tag lang-python">Python</span>
+                  <span class="skill-tag lang-jupyter">Jupyter</span>
+                  <span class="skill-tag lang-sql">MySQL</span>
+                </div>
+              </a>
             </div>
 
             <div class="project-card" role="listitem">
@@ -301,21 +326,25 @@
                 class="project-card-link"
                 target="_blank"
                 rel="noopener"
-                aria-label="Linear Algebra Graphics — view on GitHub (opens in new tab)"
-              ></a>
-              <div class="project-header">
-                <span class="project-name">Linear Algebra Graphics</span>
-              </div>
-              <p class="project-desc">
-                Automotive design case studies applying matrix transformations,
-                animation, and geometric operations to model and visualize 3D
-                structures in Python.
-              </p>
-              <div class="project-tags" aria-hidden="true">
-                <span class="skill-tag lang-python">Python</span>
-                <span class="skill-tag lang-jupyter">Jupyter</span>
-                <span class="skill-tag lang-sql">MySQL</span>
-              </div>
+                aria-labelledby="project-linear-name"
+                aria-describedby="project-linear-desc projects-new-tab-note"
+              >
+                <div class="project-header">
+                  <span class="project-name" id="project-linear-name"
+                    >Linear Algebra Graphics</span
+                  >
+                </div>
+                <p class="project-desc" id="project-linear-desc">
+                  Automotive design case studies applying matrix transformations,
+                  animation, and geometric operations to model and visualize 3D
+                  structures in Python.
+                </p>
+                <div class="project-tags" aria-hidden="true">
+                  <span class="skill-tag lang-python">Python</span>
+                  <span class="skill-tag lang-jupyter">Jupyter</span>
+                  <span class="skill-tag lang-sql">MySQL</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -345,149 +374,81 @@
           </div>
 
           <ul class="skills" role="list" aria-label="Technical skills">
-            <li
-              class="skill-tag lang-python"
-              tabindex="0"
-              role="button"
-              aria-label="Python — view projects"
-            >
-              Python
+            <li>
+              <button type="button" class="skill-tag lang-python">
+                Python
+              </button>
             </li>
-            <li
-              class="skill-tag lang-sql"
-              tabindex="0"
-              role="button"
-              aria-label="SQL — view projects"
-            >
-              SQL
+            <li>
+              <button type="button" class="skill-tag lang-sql">SQL</button>
             </li>
-            <li
-              class="skill-tag lang-javascript"
-              tabindex="0"
-              role="button"
-              aria-label="JavaScript — view projects"
-            >
-              JavaScript
+            <li>
+              <button type="button" class="skill-tag lang-javascript">
+                JavaScript
+              </button>
             </li>
-            <li
-              class="skill-tag lang-java"
-              tabindex="0"
-              role="button"
-              aria-label="Java — view projects"
-            >
-              Java
+            <li>
+              <button type="button" class="skill-tag lang-java">Java</button>
             </li>
-            <li
-              class="skill-tag lang-php"
-              tabindex="0"
-              role="button"
-              aria-label="PHP — view projects"
-            >
-              PHP
+            <li>
+              <button type="button" class="skill-tag lang-php">PHP</button>
             </li>
-            <li
-              class="skill-tag lang-cpp"
-              tabindex="0"
-              role="button"
-              aria-label="C/C++ — view projects"
-            >
-              C/C++
+            <li>
+              <button type="button" class="skill-tag lang-cpp">C/C++</button>
             </li>
-            <li
-              class="skill-tag lang-django"
-              tabindex="0"
-              role="button"
-              aria-label="Django — view projects"
-            >
-              Django
+            <li>
+              <button type="button" class="skill-tag lang-django">
+                Django
+              </button>
             </li>
-            <li
-              class="skill-tag lang-typescript"
-              tabindex="0"
-              role="button"
-              aria-label="TypeScript — view projects"
-            >
-              TypeScript
+            <li>
+              <button type="button" class="skill-tag lang-typescript">
+                TypeScript
+              </button>
             </li>
-            <li
-              class="skill-tag lang-react"
-              tabindex="0"
-              role="button"
-              aria-label="React — view projects"
-            >
-              React
+            <li>
+              <button type="button" class="skill-tag lang-react">React</button>
             </li>
-            <li
-              class="skill-tag lang-node"
-              tabindex="0"
-              role="button"
-              aria-label="Node.js — view projects"
-            >
-              Node.js
+            <li>
+              <button type="button" class="skill-tag lang-node">
+                Node.js
+              </button>
             </li>
-            <li
-              class="skill-tag lang-postgres"
-              tabindex="0"
-              role="button"
-              aria-label="PostgreSQL — view projects"
-            >
-              PostgreSQL
+            <li>
+              <button type="button" class="skill-tag lang-postgres">
+                PostgreSQL
+              </button>
             </li>
-            <li
-              class="skill-tag lang-docker"
-              tabindex="0"
-              role="button"
-              aria-label="Docker — view projects"
-            >
-              Docker
+            <li>
+              <button type="button" class="skill-tag lang-docker">
+                Docker
+              </button>
             </li>
-            <li
-              class="skill-tag lang-aws"
-              tabindex="0"
-              role="button"
-              aria-label="AWS — view projects"
-            >
-              AWS
+            <li>
+              <button type="button" class="skill-tag lang-aws">AWS</button>
             </li>
-            <li
-              class="skill-tag lang-ghactions"
-              tabindex="0"
-              role="button"
-              aria-label="GitHub Actions — view projects"
-            >
-              GitHub Actions
+            <li>
+              <button type="button" class="skill-tag lang-ghactions">
+                GitHub Actions
+              </button>
             </li>
-            <li
-              class="skill-tag lang-linux"
-              tabindex="0"
-              role="button"
-              aria-label="Linux — view projects"
-            >
-              Linux
+            <li>
+              <button type="button" class="skill-tag lang-linux">Linux</button>
             </li>
-            <li
-              class="skill-tag lang-datamgmt"
-              tabindex="0"
-              role="button"
-              aria-label="Data Management — view projects"
-            >
-              Data Management
+            <li>
+              <button type="button" class="skill-tag lang-datamgmt">
+                Data Management
+              </button>
             </li>
-            <li
-              class="skill-tag lang-bi"
-              tabindex="0"
-              role="button"
-              aria-label="BI Dashboards — view projects"
-            >
-              BI Dashboards
+            <li>
+              <button type="button" class="skill-tag lang-bi">
+                BI Dashboards
+              </button>
             </li>
-            <li
-              class="skill-tag lang-excel"
-              tabindex="0"
-              role="button"
-              aria-label="Excel/VBA — view projects"
-            >
-              Excel/VBA
+            <li>
+              <button type="button" class="skill-tag lang-excel">
+                Excel/VBA
+              </button>
             </li>
           </ul>
         </div>
@@ -511,13 +472,8 @@
               <a
                 href="mailto:jrm90@me.com"
                 class="contact-link"
-                aria-label="Send email to jrm90@me.com"
               >
-                <span
-                  class="contact-link-label contact-label-email"
-                  aria-hidden="true"
-                  >Email</span
-                >
+                <span class="contact-link-label contact-label-email">Email</span>
                 jrm90@me.com
               </a>
             </li>
@@ -527,11 +483,9 @@
                 class="contact-link"
                 target="_blank"
                 rel="noopener"
-                aria-label="GitHub profile (opens in new tab)"
+                aria-describedby="new-tab-note"
               >
-                <span
-                  class="contact-link-label contact-label-github"
-                  aria-hidden="true"
+                <span class="contact-link-label contact-label-github"
                   >GitHub</span
                 >
                 github.com/richtxteditor
@@ -543,11 +497,9 @@
                 class="contact-link"
                 target="_blank"
                 rel="noopener"
-                aria-label="LinkedIn profile (opens in new tab)"
+                aria-describedby="new-tab-note"
               >
-                <span
-                  class="contact-link-label contact-label-linkedin"
-                  aria-hidden="true"
+                <span class="contact-link-label contact-label-linkedin"
                   >LinkedIn</span
                 >
                 linkedin.com/in/johnrmolina
@@ -580,8 +532,6 @@
         >
         <span
           class="footer-made"
-          role="img"
-          aria-label="crafted with love in North NJ and NYC"
           >crafted with
           <span class="heart" aria-hidden="true">&hearts;</span> in North NJ
           <span class="garden" aria-hidden="true">🌿</span> &amp; NYC
