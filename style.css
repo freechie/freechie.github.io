@@ -293,13 +293,30 @@ nav .container {
 }
 
 .hero-title {
+  display: grid;
+  gap: 0.15rem;
   font-size: 0.85rem;
   font-family: var(--font);
   font-weight: 500;
   color: var(--muted);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  letter-spacing: 0.03em;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-title span:first-child {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero-title span:last-child {
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .hero-bio {
@@ -491,9 +508,6 @@ nav .container {
   :root:not([data-theme="dark"]) .section-label {
     color: #9a7010;
   }
-  :root:not([data-theme="dark"]) .heart {
-    color: #d42020;
-  }
 }
 
 [data-theme="light"] .btn-github {
@@ -673,6 +687,77 @@ nav .container {
   cursor: inherit;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+}
+
+/* ─── Role Fit ─────────────────────────────────────────────── */
+.fit-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border);
+  max-width: 620px;
+}
+
+.fit-item {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.45fr) 1fr;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.fit-item h3 {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.fit-item p {
+  color: var(--dim);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ─── Experience ────────────────────────────────────────────── */
+.experience-item {
+  max-width: 640px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+
+.experience-heading {
+  margin-bottom: 1rem;
+}
+
+.experience-heading h3 {
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.experience-heading p {
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.experience-summary,
+.experience-highlights {
+  color: var(--dim);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.experience-highlights {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.experience-highlights li + li {
+  margin-top: 0.75rem;
 }
 
 /* ─── About ─────────────────────────────────────────────────── */
@@ -1205,15 +1290,6 @@ footer .container {
   color: var(--muted);
 }
 
-.heart {
-  color: #f04040;
-}
-
-[data-theme="light"] .heart,
-:root:not([data-theme="dark"]) .heart {
-  color: #f03030;
-}
-
 /* ─── Responsive ────────────────────────────────────────────── */
 @media (prefers-contrast: more) {
   :root:not([data-theme="light"]) {
@@ -1247,15 +1323,23 @@ footer .container {
   }
 
   .nav-links {
-    gap: 0.75rem;
+    gap: 0.35rem;
   }
 
   .nav-links a,
   .nav-links button {
-    padding: 0.5rem 0.25rem;
+    padding: 0.5rem 0.15rem;
     min-height: 44px;
     display: inline-flex;
     align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .nav-github {
+    display: none !important;
   }
 
   section {
@@ -1293,6 +1377,19 @@ footer .container {
     overflow-wrap: break-word;
   }
 
+  .fit-list {
+    max-width: none;
+  }
+
+  .fit-item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .experience-item {
+    max-width: none;
+  }
+
   .skills {
     gap: 0.4rem;
   }
@@ -1300,5 +1397,15 @@ footer .container {
   .skill-tag {
     font-size: 0.7rem;
     padding: 0.2rem 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  nav .container {
+    justify-content: center;
+  }
+
+  .nav-logo {
+    display: none;
   }
 }

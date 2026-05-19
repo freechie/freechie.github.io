@@ -6,16 +6,16 @@
     <meta name="color-scheme" content="dark light" />
     <meta
       name="description"
-      content="Portfolio of John Molina, Software Engineer based in NJ."
+      content="Portfolio of John Molina, a software engineer focused on Python, SQL, full-stack web development, and data-intensive applications."
     />
     <title>John R. Molina</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💾</text></svg>"
-    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230f172a'/%3E%3Ctext x='50' y='61' text-anchor='middle' font-family='Arial, sans-serif' font-size='38' font-weight='700' fill='%23e8e8e8'%3EJM%3C/text%3E%3C/svg%3E" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="John R. Molina" />
-    <meta property="og:description" content="Software Engineer based in NJ" />
+    <meta
+      property="og:description"
+      content="Software engineer focused on Python, SQL, full-stack web development, and data-intensive applications."
+    />
     <meta
       property="og:image"
       content="https://richtxteditor.github.io/og-image.png"
@@ -44,6 +44,8 @@
             >jrm</a
           >
           <ul class="nav-links" role="list">
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Work</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
@@ -92,21 +94,27 @@
           />
           <div class="hero-text">
             <h1 class="hero-name" id="hero-heading">John R. Molina</h1>
-            <p class="hero-title">Software Engineer</p>
+            <p class="hero-title">
+              <span>Software Engineer</span>
+              <span>Python, C++, SQL, and Full-Stack Web</span>
+            </p>
             <div class="hero-bio">
               <p>
-                Hi, I'm a software engineer with a B.S. in Computer Science and
-                experience in data management, databases, and full-stack web
-                development.
+                I build practical software for data-heavy workflows, backend
+                services, and responsive web applications. My strongest fit is
+                a software engineering role where Python, SQL, APIs, and clear
+                debugging matter.
               </p>
               <p>
-                At Columbia University, I supported a major fundraising
-                campaign through data quality, platform maintenance, and
-                reporting.
+                My background combines a B.S. in Computer Science with hands-on
+                experience supporting enterprise data systems, maintaining
+                workflows across 5M+ records, and translating stakeholder needs
+                into reliable technical deliverables.
               </p>
               <p>
-                I'm currently strengthening my foundation in data structures
-                and algorithms.
+                Recent projects include a Django/React portfolio platform,
+                a Next.js/PostgreSQL storefront, and systems/data projects that
+                show how I approach testing, documentation, and iteration.
               </p>
             </div>
             <div class="hero-links">
@@ -120,7 +128,7 @@
                 >GitHub</a
               >
               <a
-                href="John Molina SWE resume.pdf"
+                href="John%20Molina%20SWE%20resume.pdf"
                 class="btn btn-resume"
                 target="_blank"
                 rel="noopener"
@@ -130,6 +138,85 @@
               <a href="#contact" class="btn btn-contact">Contact</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- -- Role Fit ------------------------------------------ -->
+      <section id="fit" aria-labelledby="fit-heading">
+        <div class="container">
+          <p class="section-label" aria-hidden="true">Role fit</p>
+          <h2 class="section-title" id="fit-heading">Where I Fit Best</h2>
+
+          <div class="fit-list">
+            <article class="fit-item">
+              <h3>Backend and data workflows</h3>
+              <p>
+                SQL, Python, ETL validation, reporting, and database-backed
+                applications where correctness and repeatable process matter.
+              </p>
+            </article>
+            <article class="fit-item">
+              <h3>Full-stack implementation</h3>
+              <p>
+                Django, REST APIs, React, Next.js, TypeScript, PostgreSQL,
+                Docker, and Git-based workflows for shipping user-facing tools.
+              </p>
+            </article>
+            <article class="fit-item">
+              <h3>Technical ownership</h3>
+              <p>
+                Requirements gathering, issue triage, validation, documentation,
+                and communicating technical tradeoffs to non-technical teams.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- -- Experience ---------------------------------------- -->
+      <section id="experience" aria-labelledby="experience-heading">
+        <div class="container">
+          <p class="section-label" aria-hidden="true">Experience</p>
+          <h2 class="section-title" id="experience-heading">
+            Professional Experience
+          </h2>
+
+          <article class="experience-item">
+            <div class="experience-heading">
+              <h3>Columbia University, Office of Alumni &amp; Development</h3>
+              <p>Development Assistant, Data Management Group | 2017-2022</p>
+            </div>
+            <p class="experience-summary">
+              Supported data quality, ETL workflows, reporting, and platform
+              maintenance for advancement systems serving 5M+ constituent
+              records, including weighted deduplication workflows for academic
+              affiliation data.
+            </p>
+            <ul class="experience-highlights">
+              <li>
+                Built a weighted matching workflow for deduplication efforts,
+                scoring candidate records across name, demographics, employer,
+                email, address, spouse, and degree data.
+              </li>
+              <li>
+                Developed SQL views, stakeholder reports, BI dashboards, and
+                spreadsheet review processes for duplicate prevention and manual
+                data review.
+              </li>
+              <li>
+                Resolved 10,000+ Salesforce-tracked data service inquiries while
+                coordinating with IT, administrators, developers, vendors, and
+                non-technical stakeholders.
+              </li>
+            </ul>
+            <div class="project-tags" aria-hidden="true">
+              <span class="skill-tag lang-sql">SQL</span>
+              <span class="skill-tag lang-python">Python</span>
+              <span class="skill-tag lang-datamgmt">Data Management</span>
+              <span class="skill-tag lang-bi">BI Dashboards</span>
+              <span class="skill-tag lang-excel">Excel/VBA</span>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -145,93 +232,31 @@
           <div class="projects-grid" role="list">
             <div class="project-card" role="listitem">
               <a
-                href="https://www.wikicu.com/Office_of_Alumni_and_Development"
+                href="https://github.com/richtxteditor/portfolio-website-prototype-django"
                 class="project-card-link"
                 target="_blank"
                 rel="noopener"
-                aria-labelledby="project-aanm-name"
-                aria-describedby="project-aanm-desc projects-new-tab-note"
+                aria-labelledby="project-portfolio-name"
+                aria-describedby="project-portfolio-desc projects-new-tab-note"
               >
                 <div class="project-header">
-                  <span class="project-name" id="project-aanm-name"
-                    >Academic Affiliated Name Match</span
+                  <span class="project-name" id="project-portfolio-name"
+                    >Portfolio Website Platform</span
                   >
                 </div>
-                <p class="project-desc" id="project-aanm-desc">
-                  Built preemptive deduplication workflows for admissions cycles
-                  at an Ivy League university, scoring records across eight
-                  dimensions (name, gender, age, employer, email, address, spouse,
-                  degree) to prevent duplicates in a 5M+ record database.
-                  Developed PL/SQL views, reports, and BI dashboards, using CSVs
-                  and spreadsheets for both automated and manual data review.
+                <p class="project-desc" id="project-portfolio-desc">
+                  Full-stack portfolio and blog platform built with Django 6.0,
+                  Django REST Framework, React, Wagtail CMS, and Docker.
+                  Implemented structured content management, API workflows,
+                  security controls, and automated tests for page behavior and
+                  edge cases.
                 </p>
                 <div class="project-tags" aria-hidden="true">
-                  <span class="skill-tag lang-sql">SQL</span>
                   <span class="skill-tag lang-python">Python</span>
-                  <span class="skill-tag lang-java">Java</span>
-                  <span class="skill-tag lang-datamgmt">Data Management</span>
-                  <span class="skill-tag lang-bi">BI Dashboards</span>
-                  <span class="skill-tag lang-excel">Excel/VBA</span>
-                </div>
-              </a>
-            </div>
-
-            <div class="project-card" role="listitem">
-              <a
-                href="https://richtxteditor.github.io/dsa"
-                class="project-card-link"
-                target="_blank"
-                rel="noopener"
-                aria-labelledby="project-dsa-name"
-                aria-describedby="project-dsa-desc projects-new-tab-note"
-              >
-                <div class="project-header">
-                  <span class="project-name" id="project-dsa-name"
-                    >DSA &amp; Interview Prep Tracker</span
-                  >
-                </div>
-                <p class="project-desc" id="project-dsa-desc">
-                  Structured study plan built around MIT 6.006, CLRS 4th Edition,
-                  and LeetCode. A CS refresher for technical interview
-                  preparation.
-                </p>
-                <div class="project-tags" aria-hidden="true">
-                  <span class="skill-tag lang-cpp">C</span>
-                  <span class="skill-tag lang-cpp">C++</span>
-                  <span class="skill-tag lang-python">Python</span>
-                  <span class="skill-tag lang-html">HTML</span>
-                  <span class="skill-tag lang-css">CSS</span>
+                  <span class="skill-tag lang-django">Django</span>
+                  <span class="skill-tag lang-react">React</span>
                   <span class="skill-tag lang-javascript">JavaScript</span>
-                  <span class="skill-tag lang-sql">MySQL</span>
-                  <span class="skill-tag lang-ghactions">GitHub Actions</span>
-                </div>
-              </a>
-            </div>
-
-            <div class="project-card" role="listitem">
-              <a
-                href="https://richtxteditor.github.io/devtools"
-                class="project-card-link"
-                target="_blank"
-                rel="noopener"
-                aria-labelledby="project-devtools-name"
-                aria-describedby="project-devtools-desc projects-new-tab-note"
-              >
-                <div class="project-header">
-                  <span class="project-name" id="project-devtools-name"
-                    >DevTools Cheat Sheet</span
-                  >
-                </div>
-                <p class="project-desc" id="project-devtools-desc">
-                  Single-page reference for a terminal-centric dev environment
-                  built around Zsh, Tmux, and Neovim. Documents my dotfiles setup.
-                </p>
-                <div class="project-tags" aria-hidden="true">
-                  <span class="skill-tag lang-html">HTML</span>
-                  <span class="skill-tag lang-css">CSS</span>
-                  <span class="skill-tag lang-javascript">JavaScript</span>
-                  <span class="skill-tag lang-sql">MySQL</span>
-                  <span class="skill-tag lang-ghactions">GitHub Actions</span>
+                  <span class="skill-tag lang-docker">Docker</span>
                 </div>
               </a>
             </div>
@@ -251,8 +276,9 @@
                   >
                 </div>
                 <p class="project-desc" id="project-fusion-desc">
-                  Full-stack TypeScript e-commerce platform for home-baked goods.
-                  Built with Next.js, Prisma, and PostgreSQL.
+                  Full-stack e-commerce application for a small business,
+                  covering product catalog, cart state, checkout flow, relational
+                  data modeling, and third-party payment and email integrations.
                 </p>
                 <div class="project-tags" aria-hidden="true">
                   <span class="skill-tag lang-typescript">TypeScript</span>
@@ -280,9 +306,9 @@
                   >
                 </div>
                 <p class="project-desc" id="project-chat-desc">
-                  Multithreaded chat application built over TCP/IP using Linux
-                  sockets. Handles persistent connections, message parsing, and
-                  data transmission with JUnit tests.
+                  Multithreaded client/server chat application using TCP/IP
+                  sockets, persistent connections, custom message parsing,
+                  concurrent client handling, and JUnit coverage for reliability.
                 </p>
                 <div class="project-tags" aria-hidden="true">
                   <span class="skill-tag lang-java">Java</span>
@@ -309,35 +335,10 @@
                   >
                 </div>
                 <p class="project-desc" id="project-global-desc">
-                  Data visualizations connecting global events to economic trends.
-                  Built as a data science capstone at Montclair State University.
-                </p>
-                <div class="project-tags" aria-hidden="true">
-                  <span class="skill-tag lang-python">Python</span>
-                  <span class="skill-tag lang-jupyter">Jupyter</span>
-                  <span class="skill-tag lang-sql">MySQL</span>
-                </div>
-              </a>
-            </div>
-
-            <div class="project-card" role="listitem">
-              <a
-                href="https://github.com/richtxteditor/linear-algebra-graphics-project"
-                class="project-card-link"
-                target="_blank"
-                rel="noopener"
-                aria-labelledby="project-linear-name"
-                aria-describedby="project-linear-desc projects-new-tab-note"
-              >
-                <div class="project-header">
-                  <span class="project-name" id="project-linear-name"
-                    >Linear Algebra Graphics</span
-                  >
-                </div>
-                <p class="project-desc" id="project-linear-desc">
-                  Automotive design case studies applying matrix transformations,
-                  animation, and geometric operations to model and visualize 3D
-                  structures in Python.
+                  End-to-end Python data pipeline ingesting and normalizing
+                  Bloomberg, SIPRI, and World Bank datasets, then producing
+                  visual analysis of military spending and market behavior
+                  across countries and time periods.
                 </p>
                 <div class="project-tags" aria-hidden="true">
                   <span class="skill-tag lang-python">Python</span>
@@ -357,19 +358,24 @@
 
           <div class="about-body">
             <p>
-              I'm a software engineer based in New Jersey and New York with a
-              B.S. in Computer Science and a background in data management,
-              databases, and full-stack web development.
+              I am a New Jersey/New York based software engineer pursuing
+              software engineering roles in backend, full-stack, application,
+              data engineering, and QA automation-adjacent teams.
             </p>
             <p>
-              At Columbia University, I supported data quality, reporting, and
-              system maintenance for a platform serving 5M+ alumni, donors,
-              and organizations, and contributed to BI efforts for a $5.48B
-              fundraising campaign.
+              Before moving fully into software engineering, I built practical
+              technical judgment in data management roles: writing SQL and
+              Python batch tools, supporting ETL and migration work, maintaining
+              reports and dashboards, resolving 10,000+ Salesforce-tracked data
+              service inquiries, and collaborating with IT, administrators,
+              developers, vendors, and non-technical stakeholders.
             </p>
             <p>
-              Now, I'm building projects in C/C++, Python, and JavaScript
-              while sharpening my skills in data structures and algorithms.
+              That background makes me strongest in engineering environments
+              where the work touches real users, messy data, APIs, internal
+              tooling, validation, and careful communication. I am continuing
+              to sharpen my fundamentals through MIT 6.006, CLRS, and project
+              work in Python, JavaScript/TypeScript, C/C++, and SQL.
             </p>
           </div>
 
@@ -462,8 +468,9 @@
 
           <div class="contact-text">
             <p>
-              Open to new opportunities and always happy to talk shop. Feel free
-              to reach out.
+              Open to Software Engineer, Backend Engineer, Full-Stack Developer,
+              Application Engineer, QA Automation Engineer, and data-heavy
+              engineering roles in the NYC/NJ area or remote.
             </p>
           </div>
 
@@ -532,10 +539,7 @@
         >
         <span
           class="footer-made"
-          >crafted with
-          <span class="heart" aria-hidden="true">&hearts;</span> in North NJ
-          <span class="garden" aria-hidden="true">🌿</span> &amp; NYC
-          <span class="city" aria-hidden="true">🗽</span></span
+          >Built and maintained in North NJ / NYC.</span
         >
       </div>
     </footer>
@@ -639,129 +643,6 @@
         sections.forEach(function (item) {
           observer.observe(item.section);
         });
-      })();
-
-
-      (function () {
-        // Heart glitch on hover
-        var heart = document.querySelector(".heart");
-        var city = document.querySelector(".city");
-        var garden = document.querySelector(".garden");
-        if (!heart) return;
-        var heartActive = false;
-        var heartTimeout;
-        var cityTimeout;
-        var gardenTimeout;
-        var heartGlyphs = [
-          "\u2665",
-          "\u2764",
-          "\u2661",
-          "\u2763",
-          "\u2766",
-          "\u2767",
-          "*",
-          "\u00d7",
-          "\u2620",
-          "\u2606",
-        ];
-
-        var heartColors = [
-          "#f04040",
-          "#ff2060",
-          "#ff6080",
-          "#e00040",
-          "#ff4070",
-          "#ff8090",
-          "#d02050",
-        ];
-
-        function heartScramble() {
-          if (!heartActive) return;
-          heart.style.color =
-            heartColors[Math.floor(Math.random() * heartColors.length)];
-          var dx = (Math.random() - 0.5) * 5;
-          var dy = (Math.random() - 0.5) * 4;
-          var scale = 0.9 + Math.random() * 0.5;
-          var rot = (Math.random() - 0.5) * 20;
-          heart.style.display = "inline-block";
-          heart.style.transform =
-            "translate(" +
-            dx +
-            "px," +
-            dy +
-            "px) scale(" +
-            scale +
-            ") rotate(" +
-            rot +
-            "deg)";
-          heartTimeout = setTimeout(heartScramble, 40 + Math.random() * 50);
-        }
-
-        function cityScramble() {
-          if (!heartActive || !city) return;
-          var dx = (Math.random() - 0.5) * 5;
-          var dy = (Math.random() - 0.5) * 4;
-          var scale = 0.9 + Math.random() * 0.5;
-          var rot = (Math.random() - 0.5) * 20;
-          city.style.display = "inline-block";
-          city.style.transform =
-            "translate(" +
-            dx +
-            "px," +
-            dy +
-            "px) scale(" +
-            scale +
-            ") rotate(" +
-            rot +
-            "deg)";
-          cityTimeout = setTimeout(cityScramble, 40 + Math.random() * 50);
-        }
-
-        function gardenScramble() {
-          if (!heartActive || !garden) return;
-          var dx = (Math.random() - 0.5) * 5;
-          var dy = (Math.random() - 0.5) * 4;
-          var scale = 0.9 + Math.random() * 0.5;
-          var rot = (Math.random() - 0.5) * 20;
-          garden.style.display = "inline-block";
-          garden.style.transform =
-            "translate(" +
-            dx +
-            "px," +
-            dy +
-            "px) scale(" +
-            scale +
-            ") rotate(" +
-            rot +
-            "deg)";
-          gardenTimeout = setTimeout(gardenScramble, 40 + Math.random() * 50);
-        }
-
-        function heartRestore() {
-          heartActive = false;
-          clearTimeout(heartTimeout);
-          clearTimeout(cityTimeout);
-          clearTimeout(gardenTimeout);
-          heart.style.color = "";
-          heart.style.transform = "";
-          if (city) {
-            city.style.transform = "";
-          }
-          if (garden) {
-            garden.style.transform = "";
-          }
-        }
-
-        var footerMade = document.querySelector(".footer-made");
-        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          footerMade.addEventListener("mouseenter", function () {
-            heartActive = true;
-            heartScramble();
-            cityScramble();
-            gardenScramble();
-          });
-          footerMade.addEventListener("mouseleave", heartRestore);
-        }
       })();
 
       (function () {
