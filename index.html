@@ -47,7 +47,6 @@
             jrm
           </a>
           <ul class="nav-links" role="list">
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Work</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -450,7 +449,11 @@
           </span>
           <span class="footer-name">John R. Molina</span>
         </span>
-        <span class="footer-made">Built and maintained in North NJ / NYC.</span>
+        <span class="footer-made"
+          >crafted with <span class="heart" aria-hidden="true">❤️</span> in
+          North NJ <span class="garden" aria-hidden="true">🌿</span> &amp; NYC
+          <span class="city" aria-hidden="true">🗽</span></span
+        >
       </div>
     </footer>
 
@@ -545,6 +548,89 @@
         sections.forEach(function (item) {
           observer.observe(item.section);
         });
+      })();
+
+      (function () {
+        var footerMade = document.querySelector(".footer-made");
+        var heart = document.querySelector(".heart");
+        var garden = document.querySelector(".garden");
+        var city = document.querySelector(".city");
+        var active = false;
+        var timeouts = [];
+        var heartColors = [
+          "#f04040",
+          "#ff2060",
+          "#ff6080",
+          "#e00040",
+          "#ff4070",
+          "#ff8090",
+          "#d02050",
+        ];
+
+        if (
+          !footerMade ||
+          !heart ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+          return;
+        }
+
+        function shake(el, tintHeart) {
+          if (!active || !el) return;
+          var dx = (Math.random() - 0.5) * 5;
+          var dy = (Math.random() - 0.5) * 4;
+          var scale = 0.9 + Math.random() * 0.5;
+          var rot = (Math.random() - 0.5) * 20;
+
+          el.style.display = "inline-block";
+          el.style.transform =
+            "translate(" +
+            dx +
+            "px," +
+            dy +
+            "px) scale(" +
+            scale +
+            ") rotate(" +
+            rot +
+            "deg)";
+
+          if (tintHeart) {
+            el.style.color =
+              heartColors[Math.floor(Math.random() * heartColors.length)];
+          }
+
+          timeouts.push(
+            setTimeout(
+              function () {
+                shake(el, tintHeart);
+              },
+              40 + Math.random() * 50,
+            ),
+          );
+        }
+
+        function restore() {
+          active = false;
+          timeouts.forEach(clearTimeout);
+          timeouts = [];
+          heart.style.color = "";
+          heart.style.transform = "";
+          if (garden) {
+            garden.style.transform = "";
+          }
+          if (city) {
+            city.style.transform = "";
+          }
+        }
+
+        footerMade.addEventListener("mouseenter", function () {
+          if (active) return;
+          active = true;
+          shake(heart, true);
+          shake(garden, false);
+          shake(city, false);
+        });
+        footerMade.addEventListener("mouseleave", restore);
       })();
 
       (function () {
