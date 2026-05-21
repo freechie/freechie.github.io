@@ -1006,6 +1006,9 @@ nav .container {
 .contact-label-linkedin {
   color: #61dafb;
 }
+.contact-label-twitter {
+  color: #1d9bf0;
+}
 
 /* Contact labels: light */
 :root:not([data-theme="dark"]) .contact-label-email {
@@ -1016,6 +1019,9 @@ nav .container {
 }
 :root:not([data-theme="dark"]) .contact-label-linkedin {
   color: #0891b2;
+}
+:root:not([data-theme="dark"]) .contact-label-twitter {
+  color: #0c7abf;
 }
 
 @media (prefers-color-scheme: light) {
