@@ -28,10 +28,16 @@
     <link rel="stylesheet" href="style.css" />
     <script>
       (function () {
-        var t = localStorage.getItem("theme");
-        if (t === "light" || t === "dark")
-          document.documentElement.setAttribute("data-theme", t);
-        else localStorage.removeItem("theme");
+        try {
+          var t = window.localStorage.getItem("theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          } else {
+            window.localStorage.removeItem("theme");
+          }
+        } catch (e) {
+          document.documentElement.removeAttribute("data-theme");
+        }
       })();
     </script>
   </head>
@@ -46,7 +52,7 @@
           <a href="#hero" class="nav-logo" aria-label="John Molina - home">
             jrm
           </a>
-          <ul class="nav-links" role="list">
+          <ul class="nav-links">
             <li><a href="#projects">Work</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -54,7 +60,7 @@
               <a
                 href="https://github.com/richtxteditor/richtxteditor.github.io"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-label="GitHub repository (opens in new tab)"
                 class="nav-github"
               >
@@ -83,7 +89,7 @@
       </nav>
     </header>
 
-    <main id="main">
+    <main id="main" tabindex="-1">
       <!-- Hero -->
       <section id="hero" aria-labelledby="hero-heading">
         <div class="container hero-container">
@@ -116,7 +122,7 @@
                 href="https://github.com/richtxteditor"
                 class="btn btn-github"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-describedby="new-tab-note"
               >
                 GitHub
@@ -125,7 +131,7 @@
                 href="John%20Molina%20SWE%20resume.pdf"
                 class="btn btn-resume"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-describedby="pdf-note new-tab-note"
               >
                 Resume
@@ -145,15 +151,15 @@
             >Opens in a new tab.</span
           >
 
-          <div class="projects-grid" role="list">
-            <div class="project-card" role="listitem">
+          <ul class="projects-grid">
+            <li class="project-card">
               <a
                 href="https://github.com/richtxteditor/portfolio-website-prototype-django"
                 class="project-card-link"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-labelledby="project-portfolio-name"
-                aria-describedby="project-portfolio-desc projects-new-tab-note"
+                aria-describedby="project-portfolio-desc project-portfolio-tech projects-new-tab-note"
               >
                 <div class="project-header">
                   <span class="project-name" id="project-portfolio-name"
@@ -167,6 +173,10 @@
                   security controls, and automated tests for page behavior and
                   edge cases.
                 </p>
+                <span class="sr-only" id="project-portfolio-tech"
+                  >Technologies: Python, Django, React, JavaScript, and
+                  Docker.</span
+                >
                 <div class="project-tags" aria-hidden="true">
                   <span class="skill-tag lang-python">Python</span>
                   <span class="skill-tag lang-django">Django</span>
@@ -175,16 +185,16 @@
                   <span class="skill-tag lang-docker">Docker</span>
                 </div>
               </a>
-            </div>
+            </li>
 
-            <div class="project-card" role="listitem">
+            <li class="project-card">
               <a
                 href="https://github.com/richtxteditor/fusion-manaba"
                 class="project-card-link"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-labelledby="project-fusion-name"
-                aria-describedby="project-fusion-desc projects-new-tab-note"
+                aria-describedby="project-fusion-desc project-fusion-tech projects-new-tab-note"
               >
                 <div class="project-header">
                   <span class="project-name" id="project-fusion-name"
@@ -197,6 +207,10 @@
                   relational data modeling, and third-party payment and email
                   integrations.
                 </p>
+                <span class="sr-only" id="project-fusion-tech"
+                  >Technologies: TypeScript, Next.js, PostgreSQL, MySQL, Docker,
+                  and GitHub Actions.</span
+                >
                 <div class="project-tags" aria-hidden="true">
                   <span class="skill-tag lang-typescript">TypeScript</span>
                   <span class="skill-tag lang-react">Next.js</span>
@@ -206,16 +220,16 @@
                   <span class="skill-tag lang-ghactions">GitHub Actions</span>
                 </div>
               </a>
-            </div>
+            </li>
 
-            <div class="project-card" role="listitem">
+            <li class="project-card">
               <a
                 href="https://github.com/richtxteditor/Client-Server-Chat-System-with-Enhanced-TCP-Protocol"
                 class="project-card-link"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-labelledby="project-chat-name"
-                aria-describedby="project-chat-desc projects-new-tab-note"
+                aria-describedby="project-chat-desc project-chat-tech projects-new-tab-note"
               >
                 <div class="project-header">
                   <span class="project-name" id="project-chat-name"
@@ -228,6 +242,9 @@
                   concurrent client handling, and JUnit coverage for
                   reliability.
                 </p>
+                <span class="sr-only" id="project-chat-tech"
+                  >Technologies: Java, C, Linux, MySQL, and Docker.</span
+                >
                 <div class="project-tags" aria-hidden="true">
                   <span class="skill-tag lang-java">Java</span>
                   <span class="skill-tag lang-cpp">C</span>
@@ -236,16 +253,16 @@
                   <span class="skill-tag lang-docker">Docker</span>
                 </div>
               </a>
-            </div>
+            </li>
 
-            <div class="project-card" role="listitem">
+            <li class="project-card">
               <a
                 href="https://github.com/richtxteditor/MSU-datasci-geopolitical-analysis"
                 class="project-card-link"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-labelledby="project-global-name"
-                aria-describedby="project-global-desc projects-new-tab-note"
+                aria-describedby="project-global-desc project-global-tech projects-new-tab-note"
               >
                 <div class="project-header">
                   <span class="project-name" id="project-global-name"
@@ -258,14 +275,17 @@
                   visual analysis of military spending and market behavior
                   across countries and time periods.
                 </p>
+                <span class="sr-only" id="project-global-tech"
+                  >Technologies: Python, Jupyter, and MySQL.</span
+                >
                 <div class="project-tags" aria-hidden="true">
                   <span class="skill-tag lang-python">Python</span>
                   <span class="skill-tag lang-jupyter">Jupyter</span>
                   <span class="skill-tag lang-sql">MySQL</span>
                 </div>
               </a>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -296,80 +316,71 @@
             </p>
           </div>
 
-          <ul class="skills" role="list" aria-label="Technical skills">
+          <h3 class="sr-only" id="skills-heading">Technical skills</h3>
+          <ul class="skills">
             <li>
-              <button type="button" class="skill-tag lang-python">
-                Python
-              </button>
+              <a href="#projects" class="skill-tag lang-python">Python</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-sql">SQL</button>
+              <a href="#projects" class="skill-tag lang-sql">SQL</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-javascript">
+              <a href="#projects" class="skill-tag lang-javascript">
                 JavaScript
-              </button>
+              </a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-java">Java</button>
+              <a href="#projects" class="skill-tag lang-java">Java</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-php">PHP</button>
+              <a href="#projects" class="skill-tag lang-php">PHP</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-cpp">C/C++</button>
+              <a href="#projects" class="skill-tag lang-cpp">C/C++</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-django">
-                Django
-              </button>
+              <a href="#projects" class="skill-tag lang-django">Django</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-typescript">
+              <a href="#projects" class="skill-tag lang-typescript">
                 TypeScript
-              </button>
+              </a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-react">React</button>
+              <a href="#projects" class="skill-tag lang-react">React</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-node">Node.js</button>
+              <a href="#projects" class="skill-tag lang-node">Node.js</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-postgres">
+              <a href="#projects" class="skill-tag lang-postgres">
                 PostgreSQL
-              </button>
+              </a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-docker">
-                Docker
-              </button>
+              <a href="#projects" class="skill-tag lang-docker">Docker</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-aws">AWS</button>
+              <a href="#projects" class="skill-tag lang-aws">AWS</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-ghactions">
+              <a href="#projects" class="skill-tag lang-ghactions">
                 GitHub Actions
-              </button>
+              </a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-linux">Linux</button>
+              <a href="#projects" class="skill-tag lang-linux">Linux</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-datamgmt">
+              <a href="#projects" class="skill-tag lang-datamgmt">
                 Data Management
-              </button>
+              </a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-bi">
-                BI Dashboards
-              </button>
+              <a href="#projects" class="skill-tag lang-bi">BI Dashboards</a>
             </li>
             <li>
-              <button type="button" class="skill-tag lang-excel">
-                Excel/VBA
-              </button>
+              <a href="#projects" class="skill-tag lang-excel">Excel/VBA</a>
             </li>
           </ul>
         </div>
@@ -387,7 +398,7 @@
             </p>
           </div>
 
-          <ul class="contact-links" role="list">
+          <ul class="contact-links">
             <li>
               <a href="mailto:jrm90@me.com" class="contact-link">
                 <span class="contact-link-label contact-label-email"
@@ -401,7 +412,7 @@
                 href="https://github.com/richtxteditor"
                 class="contact-link"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-describedby="new-tab-note"
               >
                 <span class="contact-link-label contact-label-github">
@@ -415,7 +426,7 @@
                 href="https://www.linkedin.com/in/johnrmolina/"
                 class="contact-link"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-describedby="new-tab-note"
               >
                 <span class="contact-link-label contact-label-linkedin">
@@ -429,7 +440,7 @@
                 href="https://x.com/richtxteditor"
                 class="contact-link"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-describedby="new-tab-note"
               >
                 <span class="contact-link-label contact-label-twitter">
@@ -464,39 +475,85 @@
           <span class="footer-name">John R. Molina</span>
         </span>
         <span class="footer-made"
-          >crafted with <span class="heart" aria-hidden="true">❤️</span> in
-          North NJ <span class="garden" aria-hidden="true">🌿</span> &amp; NYC
+          >crafted with <span class="sr-only">love</span
+          ><span class="heart" aria-hidden="true">❤️</span> in North NJ
+          <span class="garden" aria-hidden="true">🌿</span> &amp; NYC
           <span class="city" aria-hidden="true">🗽</span></span
         >
       </div>
     </footer>
 
     <script>
+      var siteHelpers = (function () {
+        function getMedia(query) {
+          if (typeof window.matchMedia !== "function") return null;
+          return window.matchMedia(query);
+        }
+
+        function getTheme() {
+          try {
+            var theme = window.localStorage.getItem("theme");
+            return theme === "light" || theme === "dark" ? theme : "auto";
+          } catch (e) {
+            return "auto";
+          }
+        }
+
+        function setTheme(mode) {
+          try {
+            if (mode === "auto") {
+              window.localStorage.removeItem("theme");
+            } else {
+              window.localStorage.setItem("theme", mode);
+            }
+          } catch (e) {
+            return;
+          }
+        }
+
+        function prefersReducedMotion() {
+          var media = getMedia("(prefers-reduced-motion: reduce)");
+          return Boolean(media && media.matches);
+        }
+
+        function scrollBehavior() {
+          return prefersReducedMotion() ? "auto" : "smooth";
+        }
+
+        return {
+          getMedia: getMedia,
+          getTheme: getTheme,
+          setTheme: setTheme,
+          prefersReducedMotion: prefersReducedMotion,
+          scrollBehavior: scrollBehavior,
+        };
+      })();
+
       (function () {
         var yearEl = document.getElementById("year");
         var y = new Date().getFullYear();
+        if (!yearEl) return;
         yearEl.textContent = y;
-        yearEl.setAttribute("datetime", y);
+        yearEl.setAttribute("datetime", String(y));
       })();
 
       (function () {
         var btn = document.getElementById("theme-toggle");
         var root = document.documentElement;
         var modes = ["auto", "light", "dark"];
+        if (!btn) return;
 
         function getStored() {
-          var t = localStorage.getItem("theme");
-          return t === "light" || t === "dark" ? t : "auto";
+          return siteHelpers.getTheme();
         }
 
         function apply(mode) {
           if (mode === "auto") {
             root.removeAttribute("data-theme");
-            localStorage.removeItem("theme");
           } else {
             root.setAttribute("data-theme", mode);
-            localStorage.setItem("theme", mode);
           }
+          siteHelpers.setTheme(mode);
         }
 
         function updateLabel() {
@@ -522,46 +579,55 @@
           updateLabel();
         });
 
-        matchMedia("(prefers-color-scheme: light)").addEventListener(
-          "change",
-          function () {
+        var colorMedia = siteHelpers.getMedia("(prefers-color-scheme: light)");
+        if (colorMedia) {
+          var handleSystemThemeChange = function () {
             if (getStored() === "auto") apply("auto");
             updateLabel();
-          },
-        );
+          };
+          if (typeof colorMedia.addEventListener === "function") {
+            colorMedia.addEventListener("change", handleSystemThemeChange);
+          } else if (typeof colorMedia.addListener === "function") {
+            colorMedia.addListener(handleSystemThemeChange);
+          }
+        }
         updateLabel();
       })();
 
       (function () {
-        var navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+        var navLinks = Array.prototype.slice.call(
+          document.querySelectorAll("nav a[href^='#']"),
+        );
         var sections = [];
         navLinks.forEach(function (link) {
           var sec = document.querySelector(link.getAttribute("href"));
           if (sec) sections.push({ link: link, section: sec });
         });
 
-        var observer = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              sections.forEach(function (item) {
-                if (item.section === entry.target) {
-                  if (entry.isIntersecting) {
-                    item.link.classList.add("active");
-                    item.link.setAttribute("aria-current", "true");
-                  } else {
-                    item.link.classList.remove("active");
-                    item.link.removeAttribute("aria-current");
-                  }
-                }
-              });
-            });
-          },
-          { rootMargin: "-50% 0px -50% 0px" },
-        );
+        function setActive(activeLink) {
+          navLinks.forEach(function (link) {
+            link.classList.toggle("active", link === activeLink);
+            if (link === activeLink) {
+              link.setAttribute("aria-current", "location");
+            } else {
+              link.removeAttribute("aria-current");
+            }
+          });
+        }
 
-        sections.forEach(function (item) {
-          observer.observe(item.section);
-        });
+        function updateActive() {
+          if (!sections.length) return;
+          var marker = window.scrollY + Math.max(96, window.innerHeight * 0.35);
+          var current = sections[0];
+          sections.forEach(function (item) {
+            if (item.section.offsetTop <= marker) current = item;
+          });
+          setActive(current.link);
+        }
+
+        window.addEventListener("scroll", updateActive, { passive: true });
+        window.addEventListener("resize", updateActive);
+        updateActive();
       })();
 
       (function () {
@@ -581,11 +647,7 @@
           "#d02050",
         ];
 
-        if (
-          !footerMade ||
-          !heart ||
-          matchMedia("(prefers-reduced-motion: reduce)").matches
-        ) {
+        if (!footerMade || !heart || siteHelpers.prefersReducedMotion()) {
           return;
         }
 
@@ -648,30 +710,14 @@
       })();
 
       (function () {
-        function scrollToProjects() {
-          document
-            .getElementById("projects")
-            .scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-        document.querySelectorAll(".skills .skill-tag").forEach(function (tag) {
-          tag.addEventListener("click", scrollToProjects);
-          tag.addEventListener("keydown", function (e) {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              scrollToProjects();
-            }
-          });
-        });
-      })();
-
-      (function () {
         var toTop = document.getElementById("to-top");
         function toggle() {
           toTop.hidden = window.scrollY < 400;
         }
+        if (!toTop) return;
         window.addEventListener("scroll", toggle, { passive: true });
         toTop.addEventListener("click", function () {
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          window.scrollTo({ top: 0, behavior: siteHelpers.scrollBehavior() });
         });
         toggle();
       })();
@@ -683,7 +729,7 @@
         var hovering = false;
         var interval;
 
-        if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        if (!logo || siteHelpers.prefersReducedMotion()) return;
 
         function runScramble() {
           var iterations = 0;

@@ -162,6 +162,7 @@ body {
 section {
   padding: 6rem 0;
   border-bottom: 1px solid var(--border);
+  scroll-margin-top: 72px;
 }
 
 section:last-of-type {
@@ -494,6 +495,7 @@ nav .container {
   gap: 1px;
   border: 1px solid var(--border);
   border-radius: 6px;
+  list-style: none;
   /* Use clip instead of hidden so focus outlines can paint outside */
   overflow: clip;
 }
@@ -720,6 +722,7 @@ nav .container {
   -webkit-backdrop-filter: blur(12px);
   background-clip: padding-box;
   cursor: pointer;
+  text-decoration: none;
   transition: transform 0.15s, background 0.15s;
 }
 
@@ -1102,7 +1105,207 @@ footer .container {
   color: var(--muted);
 }
 
-/* Responsive */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .nav-logo {
+    color: #b07ee8;
+  }
+
+  :root:not([data-theme="light"]) .btn-primary {
+    color: #f0cc60;
+    border-color: #a08030;
+    background: rgba(240, 204, 96, 0.2);
+  }
+
+  :root:not([data-theme="light"]) .btn-primary:hover {
+    color: #ffe080;
+    border-color: #f0cc60;
+    background: rgba(240, 204, 96, 0.3);
+  }
+
+  :root:not([data-theme="light"]) .btn-github {
+    color: #b8a8f0;
+    border-color: #6050bb;
+    background: rgba(160, 144, 224, 0.22);
+  }
+
+  :root:not([data-theme="light"]) .btn-github:hover {
+    color: #d0c0ff;
+    border-color: #b8a8f0;
+    background: rgba(160, 144, 224, 0.35);
+  }
+
+  :root:not([data-theme="light"]) .btn-resume {
+    color: #90d8ff;
+    border-color: #3580cc;
+    background: rgba(128, 204, 255, 0.22);
+  }
+
+  :root:not([data-theme="light"]) .btn-resume:hover {
+    color: #b0e8ff;
+    border-color: #90d8ff;
+    background: rgba(128, 204, 255, 0.35);
+  }
+
+  :root:not([data-theme="light"]) .btn-contact {
+    color: #80f0b0;
+    border-color: #309960;
+    background: rgba(112, 240, 168, 0.22);
+  }
+
+  :root:not([data-theme="light"]) .btn-contact:hover {
+    color: #a8ffd0;
+    border-color: #80f0b0;
+    background: rgba(112, 240, 168, 0.35);
+  }
+
+  :root:not([data-theme="light"]) .section-label,
+  :root:not([data-theme="light"]) .footer-copy {
+    color: #d4a830;
+  }
+
+  :root:not([data-theme="light"]) .lang-python {
+    color: #4ec9b0;
+    border-color: rgba(78, 201, 176, 0.5);
+    background: rgba(78, 201, 176, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-typescript {
+    color: #569cd6;
+    border-color: rgba(86, 156, 214, 0.5);
+    background: rgba(86, 156, 214, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-javascript {
+    color: #e8d44d;
+    border-color: rgba(232, 212, 77, 0.45);
+    background: rgba(232, 212, 77, 0.1);
+  }
+
+  :root:not([data-theme="light"]) .lang-java {
+    color: #ff6b6b;
+    border-color: rgba(255, 107, 107, 0.5);
+    background: rgba(255, 107, 107, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-php {
+    color: #b48ead;
+    border-color: rgba(180, 142, 173, 0.5);
+    background: rgba(180, 142, 173, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-sql {
+    color: #ff9ec6;
+    border-color: rgba(255, 158, 198, 0.5);
+    background: rgba(255, 158, 198, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-cpp {
+    color: #c586c0;
+    border-color: rgba(197, 134, 192, 0.5);
+    background: rgba(197, 134, 192, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-django {
+    color: #73d677;
+    border-color: rgba(115, 214, 119, 0.5);
+    background: rgba(115, 214, 119, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-react {
+    color: #61dafb;
+    border-color: rgba(97, 218, 251, 0.45);
+    background: rgba(97, 218, 251, 0.12);
+  }
+
+  :root:not([data-theme="light"]) .lang-node {
+    color: #a3e635;
+    border-color: rgba(163, 230, 53, 0.5);
+    background: rgba(163, 230, 53, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-postgres {
+    color: #7cacf8;
+    border-color: rgba(124, 172, 248, 0.5);
+    background: rgba(124, 172, 248, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-docker {
+    color: #38bdf8;
+    border-color: rgba(56, 189, 248, 0.5);
+    background: rgba(56, 189, 248, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-aws {
+    color: #f9a825;
+    border-color: rgba(249, 168, 37, 0.5);
+    background: rgba(249, 168, 37, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-ghactions {
+    color: #3b82f6;
+    border-color: rgba(59, 130, 246, 0.5);
+    background: rgba(59, 130, 246, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-linux {
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.45);
+    background: rgba(251, 191, 36, 0.1);
+  }
+
+  :root:not([data-theme="light"]) .lang-jupyter {
+    color: #fb923c;
+    border-color: rgba(251, 146, 60, 0.5);
+    background: rgba(251, 146, 60, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-html {
+    color: #f97316;
+    border-color: rgba(249, 115, 22, 0.5);
+    background: rgba(249, 115, 22, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-css {
+    color: #a78bfa;
+    border-color: rgba(167, 139, 250, 0.5);
+    background: rgba(167, 139, 250, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-datamgmt {
+    color: #f5a623;
+    border-color: rgba(245, 166, 35, 0.5);
+    background: rgba(245, 166, 35, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-bi {
+    color: #818cf8;
+    border-color: rgba(129, 140, 248, 0.5);
+    background: rgba(129, 140, 248, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .lang-excel {
+    color: #4ade80;
+    border-color: rgba(74, 222, 128, 0.5);
+    background: rgba(74, 222, 128, 0.14);
+  }
+
+  :root:not([data-theme="light"]) .contact-label-email {
+    color: #ff6b6b;
+  }
+
+  :root:not([data-theme="light"]) .contact-label-github {
+    color: #c586c0;
+  }
+
+  :root:not([data-theme="light"]) .contact-label-linkedin {
+    color: #61dafb;
+  }
+
+  :root:not([data-theme="light"]) .contact-label-twitter {
+    color: #1d9bf0;
+  }
+}
+
 @media (prefers-contrast: more) {
   :root:not([data-theme="light"]) {
     --muted: #999999;
